@@ -1,5 +1,6 @@
 :root{
-    --back: #222;
+    --back: #6F445B;
+    --back2: #622e4f;
     --overlay: #333;
     --light-font-color: #fff;
     --gray: #777;
@@ -36,15 +37,26 @@ p {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 .button-container{
-    border-radius: 0.5em;
+    border-radius: 0.75em;
     background: var(--back);
     padding: 0.5rem;
     width: fit-content;
 }
+
+.button-container:hover{
+    color: var(--light-font-color);
+    background-color: var(--back2);
+}
+
 .git-link{
     text-decoration: none;
     color: var(--light-font-color);
 }
+
+.git-link:hover{
+    color: var(--light-font-color);
+}
+
 
 h1, h2, h3 {
     font-weight: bold;
