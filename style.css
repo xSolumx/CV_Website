@@ -1,0 +1,176 @@
+:root{
+    --back: #222;
+    --overlay: #333;
+    --light-font-color: #fff;
+    --gray: #777;
+}
+
+
+body {
+    background-color: var(--back);
+    color: var(--gray);
+    font-family: 'Roboto', sans-serif;
+}
+
+footer {
+    background-color: var(--back);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+a {
+    color: #00855f;
+    text-decoration: none;
+}
+
+p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+.button-container{
+    border-radius: 0.5em;
+    background: var(--back);
+    padding: 0.5rem;
+    width: fit-content;
+}
+.git-link{
+    text-decoration: none;
+    color: var(--light-font-color);
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    color: #333;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #626262;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.skills li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 6px 12px;
+    background-color: var(--back);
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--light-font-color)
+}
+
+.card {
+    background-color: var(--back);
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    padding: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--back);
+    border-radius: 5px;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #111;
+}
+
+
+
+.navbar-dark {
+    background-color: #333;
+}
+
+.navbar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar .nav-link.active {
+    color: #fff;
+}
+
+.card {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode {
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+}
+
+.card.dark-mode {
+    background-color: #2c2c2c;
+    color: #f5f5f5;
+}
+
+.btn-dark-mode {
+    background-color: #f5f5f5;
+    color: #1c1c1c;
+}
+
+.btn-dark-mode:hover {
+    background-color: #ddd;
+}
+
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode li {
+    color: #f8f9fa;
+}
+
+.dark-mode a {
+    color: #f8f9fa;
+    text-decoration: none;
+}
+
+.dark-mode a:hover {
+    text-decoration: underline;
+}
