@@ -16,7 +16,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,15 +34,17 @@
                         <a class="nav-link" href="skills.html">Skills</a>
                     </li>
                     <li class="nav-item">
+
                         <a class="nav-link" href="projects.html">Projects</a>
                     </li>
                 </ul>
             </div>
-            <div class="d-flex justify-content-end mt-3">
-                <button id="dark-mode-toggle" class="btn btn-sm btn-dark">Dark Mode</button>
+            <div class="ml-auto pr-3">
+                <button id="dark-mode-toggle" class="btn btn-sm btn-dark-mode">Dark Mode</button>
             </div>
         </nav>
     </header>
+    <div style="height: 5em;"></div>
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-8 order-2 order-md-2">
@@ -50,10 +52,10 @@
             </div>
         </div>
         <div class="card">
-            <h2 class="card-title">Additional Blocks</h2>
+            <h2 class="card-title">Additional-Blocks</h2>
             <div class="card-text">
                 <h3>Minecraft plugin that allows the use of custom modelled blocks, written in Java </h3>
-                <p>I created a framework that allowed myself to add cutom blocks to the base game of minecraft, i wrote
+                <p>I created a system that allowed myself to add any custom block into the base game of Minecraft, i wrote
                     scripts to import JSON files and PNG files and appropriatly catagorize them into their blocks types.
                     directional placement was a small challenge that i had to overcome using the players camera position
                     and abstracted vector maths</p>
@@ -61,25 +63,31 @@
         </div>
 
         <div class="card">
-            <h2 class="card-title">RebelsItems</h2>
+            <h2 class="card-title">Rebels-Items</h2>
             <div class="card-text">
                 <h3>Framework to implement customized in game weapons and tools, written in Java</h3>
-                <p>omg this took me 2 years and im still not done. Uses some janky methods to store data on the item itself which was not possible using the minecraft server framework, so a workaround was required.</p>
+                <p>omg this took me 2 years and im still not done. Uses some janky methods to store data on the item
+                    itself which was not possible using the minecraft server framework, so a workaround was required.
+                </p>
             </div>
         </div>
         <div class="card">
-            <h2 class="card-title">RebelsBack</h2>
+            <h2 class="card-title">Rebels-Back</h2>
             <div class="card-text">
                 <h3>Minecraft plugin that manipulates and stores player locations</h3>
-                <p>Coded in java, this plugin stores the players location upon their death or any teleoprt event so that they can jump between locations for convenience, while this is a simple plugin, it implements many features that do not exists among other publically available plugins.</p>
+                <p>Coded in java, this plugin stores the players location upon their death or any teleoprt event so that
+                    they can jump between locations for convenience, while this is very a simple plugin, it implements
+                    features that do not exists among other publically available plugins.</p>
             </div>
         </div>
         <div class="card">
-            <h2 class="card-title">Rebels Pack</h2>
+            <h2 class="card-title">Rebels-Pack</h2>
             <div class="card-text">
                 <h3>Minecraft resource pack</h3>
                 <p>Contains custom item icons, models, modified JSON files
-                    This integrates into RebelsItems and AdditionalBlocks to provide the customized textures and models. There was no programming involved with this, though i did create 12 custom GUI's 100 Custom icons and 20 custom models for this project.
+                    This integrates into RebelsItems and AdditionalBlocks to provide the customized textures and models.
+                    There was no programming involved with this, though i did create 12 custom GUI's 100 Custom icons
+                    and 20 custom models for this project.
                 </p>
             </div>
         </div>
