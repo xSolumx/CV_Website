@@ -207,3 +207,6 @@ body.dark-mode {
     text-decoration: none;
     font-weight: bolder;
 }
+#dark-mode-toggle{
+    margin-right: 2em;
+}
