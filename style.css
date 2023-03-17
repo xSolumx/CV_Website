@@ -10,7 +10,7 @@
 body {
     background-color: var(--back);
     color: var(--gray);
-    font-family: 'Roboto', sans-serif;
+    font-family: "poppins", sans-serif;
 }
 
 footer {
@@ -34,7 +34,7 @@ a:hover {
 
 p {
     color: #666;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.5;
 }
 
@@ -48,6 +48,7 @@ p {
     background: var(--back);
     padding: 0.5rem;
     width: fit-content;
+    margin-right: 0.5em;
 }
 
 .button-container:hover{
@@ -71,11 +72,14 @@ h1, h2, h3 {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 60px;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 30px;
+}
+h4 {
+    font-size: 25px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -130,13 +134,13 @@ li {
 }
 
 .card-title {
-    font-size: 26px;
+    font-size: 32px;
     font-weight: bold;
     color: #5b5b5b;
 }
 
 .card-text {
-    font-size: 16px;
+    font-size: 24px;
     color: #666;
 }
 
