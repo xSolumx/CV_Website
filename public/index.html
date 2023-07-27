@@ -1,89 +1,202 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.1.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.1.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.1.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.1.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.1.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.1.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.1.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.1.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.1.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.1.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<head>
+   <meta charset="utf-8">
+   <title>Hayden Austin's Portfolio</title>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+   <!-- Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+   <script src="script.js"></script>
+</head>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+<body>
+   <header>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+         <a class="navbar-brand" href="#"></a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+               <li class="button-container">
+                  <a class="git-link" href="index.html">About</a>
+               </li>
+               <li class="button-container">
+                  <a class="git-link" href="education.html">Education</a>
+               </li>
+               <li class="button-container">
+                  <a class="git-link" href="skills.html">Skills</a>
+               </li>
+               <li class="button-container">
+                  <a class="git-link" href="projects.html">Projects</a>
+               </li>
+               <li>
+                  <div class="button-container">
+                     <a class="git-link" href="https://github.com/xSolumx">My GitHub</a>
+                  </div>
+               </li>
+               <li class="button-container">
+                  <a class="git-link"
+                     href="https://drive.google.com/file/d/1_uDjBxWP7nolbn9mmwO49v__YoySpGWC/view?usp=sharing">View
+                     CV</a>
+               </li>
+            </ul>
+         </div>
+         <div class="ml-auto pr-3">
+            <button id="dark-mode-toggle" class="btn btn-sm btn-dark-mode">Dark Mode</button>
+         </div>
+      </nav>
+   </header>
+   <div style="height: 2em;"></div>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+   <div class="container">
+      <div class="card">
+         <div class="row align-items-lg-start">
+            <div class="col-md-4 order-1 order-md-1">
+               <img src="images/Micr.png" alt="Profile Picture" class="img-fluid mx-auto rounded-1">
+            </div>
+            <div class="col-md-4 order-2 order-md-2">
+               <h2 class="card-title" style="font-size: 50px;">Hayden Austin</h2>
+               <p>Software Engineering Student | 3rd year</p>
+               <p>Email: haydaust@gmail.com</p>
+               <p>Phone: 067 975 8624</p>
+               <p>GitHub: https://github.com/xSolumx</p>
+
+            </div>
+            <div class="col-md-4 order-3 order-md-3">
+               <h2 class="card-title">About Me</h2>
+               <p>I am an aspiring software developer in his last year of university with experience using programming
+                  and scripting languages, such as JavaScript, C# and Java. I founded and managed a small business where
+                  I led a team in creating a game server. The game server mainly catered to Minecraft users and hosted
+                  13,000 unique players and 20 players on the server on average. Through doing this, I gained valuable
+                  experience in project management and team leadership as well as technical experience in Java and
+                  Photoshop.</p>
+            </div>
+         </div>
+      </div>
+      <div class="card">
+         <h2 class="card-title">Skills</h2>
+         <div class="card-text skills">
+            <ul>
+               <li>C#</li>
+               <li>C++</li>
+               <li>Java</li>
+               <li>Python</li>
+               <li>Node.js</li>
+               <li>HTML/CSS</li>
+               <li>JavaScript</li>
+               <li>SQL</li>
+               <li>Git</li>
+               <li>Linux Server Management</li>
+               <li>Adobe PhotoShop</li>
+               <li>Blender 3D</li>
+               <li>UI/UX</li>
+            </ul>
+         </div>
+      </div>
+      <div class="card">
+         <h2 class="card-title">A Litle Bit About Myself</h2>
+         <div class="card-text">
+            <ul>
+               <li class="m">I'm Hayden Austin. As far as hobbies go, I love reading books; 
+                  that's probably my main hobby considering I've read about 0.321 books per day in 
+                  the past year. I mainly read Sci-fi and Fantasy novels, some memorable books to me 
+                  are: The Name of the Wind, Ringworld, , Foundation, Dune (all OG 6. myFavourite: 
+                  "God Emperor Of Dune"), Speaker For The Dead, and everything Terry Pratchet.</li>
+               <li class="m">I've also enjoyed Gaming throughout my life, I bought an overkill PC just 
+                  to play Minecraft. I probably play more strategy games than anything else, 
+                  Civ 5, Civ 6(still prefer 5 tho), Cities Skylines, Stellaris, Anno 1800. 
+                  I'm constantly picking up indie games when I find myself lacking creative energy, 
+                  the innovation and design choices in indie games really inspires me, i also just 
+                  enjoy looking at pretty design.</li>  
+               <li class="m">Technology has also been a major passion throughout my life. 
+                  I always loved seeing new technology come out when I was a child, 
+                  and I still follow Nvidia, AMD, and intel; just to see who's on top. 
+                  It's incredible to witness how technology has evolved over the years. 
+                  From artificial intelligence and machine learning to virtual and augmented reality, 
+                  the possibilities seem endless. I'm amazed by the power of modern computers and the 
+                  Rapid race of AI revolutionaries, bringing us closer to intelligent automation and 
+                  incredible application of natural language processing and computer vision into 
+                  modern life. Also NASA, because they have invented and innovated so 
+                  much in the realm of Technology. and they also give as cool pictures of 
+                  the galaxy to look at.</li>
+               <li class="m">I'd also say i'm an ex-artist; i barely draw or paint anymore. 
+                  However drawing and doodling is something i've done since i can remember 
+                  and i still have a strong passion for Art and good design</li>   
+            </ul>
+         </div>
+      </div>
+      <div class="card">
+         <h1 class="card-title">A Brief Overview Of My Programming Experience</h1>
+         <div class="card-text">
+            <h4>2019-2023</h4>
+            <p>Current Life at Belgium Campus</p>
+            <ul style="list-style: disc;">
+               <li>Honestly i can't say i've achieved much on a grand scale beyond surviving here, so i'll just say what i think about my experience learning at Belgium Campus</li>
+               <li>I've loved every programming class so far. Ecspecially Web Programming, though that may be purely because i had such a great lecturer. there's a class called SAD(Sofware Analysis and Design) and the title SAD really does fit what it's like. Theory subjects just don't get my brain working enough</li>
+               <li>i've been doing small programming projects or tests to learn new things, because i don't get nearly enough programming classes during the year</li>
+               <li>I've enjoyed the fast paced learning style</li>
+               <li>I enjoyed MLG382 so much that i've started playing around with public datasets and training some models myself</li>
+               </li>
+            </ul>
+            <p>Beyond Higschool</p>
+            <ul style="list-style: disc;">
+               <li>Founded a successful Minecraft server with a modest $40 capital investment</li>
+               <li>Turned half a million Rand return in 2 years</li>
+               <li>Managed a team of up to 12 people</li>
+               <li>Honed important skills, including:</li>
+               <ul style="list-style-type: circle;">
+                  <li>Strategic design principles</li>
+                  <li>Content moderation</li>
+                  <li>Linux server configuration and maintenance</li>
+                  <li>Java programming</li>
+                  <li>Teamwork and adaptability</li>
+                  <li>Project management</li>
+                  <li>Optimizing systems</li>
+                  <li>Communication</li>
+               </ul>
+               </li>
+            </ul>
+            <h4>2015-2018</h4>
+            <p>High School</p>
+            <ul style="list-style: disc;">
+               <li>In high school I created Java games and virtual 3D worlds outside of class for my assignments and
+                  projects.</li>
+
+               <li>I developed a strong relationship with the school's IT department, and contributed significantly by
+                  reconfiguring the Wi-Fi setup and attending CISCO training sessions alongside the regular technicians.
+               </li>
+
+               <li>I co-founded the 'Computers Club' to teach programming skills to fellow students and conduct hardware
+                  experiments using the school's resources, leading to enjoyable learning experiences and personal
+                  growth.</li>
+            <!-- </ul>
+            <h4>2009-2014</h4>
+            <p>Early Years</p>
+            <ul style="list-style: disc;">
+               <li>As an early enthusiast of technology and programming, I discovered my love for programming at the age
+                  of 8, when I began creating text adventure games using batch scripting. This
+                  early experience ignited a passion within me, motivating me to delve deeper into the world of
+                  computers.</li>
+               <li>In my eagerness to learn, I would often take apart laptops and desktops, and then
+                  reassemble them to gain a better understanding of their inner workings. These experiences fostered a
+                  lifelong curiosity in the field of computing.</li>
+            </ul> -->
+         </div>
+      </div>
+
+   </div>
+   </div>
+
+   <!-- Add the jQuery library -->
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   <!-- Add the Bootstrap JavaScript file -->
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
 </html>
