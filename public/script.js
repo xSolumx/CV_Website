@@ -1,56 +1,43 @@
-const root = document.documentElement;
-const header = document.querySelector('[data-header]');
-const themeButton = document.querySelector('[data-theme-button]');
-const menuButton = document.querySelector('[data-menu-button]');
-const nav = document.querySelector('[data-nav]');
+$(document).ready(function () {
+  // Retrieve dark mode preference from local storage
+  var darkMode = localStorage.getItem("darkMode");
 
-const setThemeLabel = () => {
-  const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-  themeButton?.setAttribute('aria-label', `Switch to ${nextTheme} theme`);
-  themeButton?.setAttribute('title', `Switch to ${nextTheme} theme`);
-};
+  // Apply dark mode classes to elements if preference exists
+  if (darkMode === "true") {
+    $("body").addClass("dark-mode");
+    $(".card").addClass("dark-mode");
+    $(".btn").addClass("btn-dark-mode btn-dark");
+    $(".navbar").addClass("navbar-dark bg-dark");
+    $(".m").addClass("m-dark");
+    $("#dark-mode-toggle").text("Light Mode");
+  }
 
-setThemeLabel();
+  // Toggle classes and save the preference to local storage
+  $("#dark-mode-toggle").click(function () {
+    var $btn = $(this);
+    var isDarkMode = $("body").hasClass("dark-mode");
+    $("body").toggleClass("dark-mode");
+    $(".card").toggleClass("dark-mode");
+    $(".btn").toggleClass("btn-dark-mode btn-dark");
+    $(".navbar").toggleClass("navbar-dark bg-dark");
+    $(".m").toggleClass("m-dark");
+    $btn.text(isDarkMode ? "Dark Mode" : "Light Mode");
+    localStorage.setItem("darkMode", $("body").hasClass("dark-mode"));
+  });
 
-themeButton?.addEventListener('click', () => {
-  root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-  localStorage.setItem('theme', root.dataset.theme);
-  setThemeLabel();
-});
+  const mA = document.querySelectorAll('.m');
 
-const closeMenu = () => {
-  nav?.classList.remove('is-open');
-  menuButton?.setAttribute('aria-expanded', 'false');
-  document.body.style.overflow = '';
-};
-
-menuButton?.addEventListener('click', () => {
-  const willOpen = menuButton.getAttribute('aria-expanded') !== 'true';
-  menuButton.setAttribute('aria-expanded', String(willOpen));
-  nav?.classList.toggle('is-open', willOpen);
-  document.body.style.overflow = willOpen ? 'hidden' : '';
-});
-
-nav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
-window.addEventListener('keydown', (event) => event.key === 'Escape' && closeMenu());
-
-const updateHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 20);
-updateHeader();
-window.addEventListener('scroll', updateHeader, { passive: true });
-
-document.querySelector('[data-year]').textContent = new Date().getFullYear();
-
-if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
+  mA.forEach(mEl => {
+    mEl.addEventListener('mousemove', e => {
+      const { left, top, width, height } = mEl.getBoundingClientRect();
+      const x = e.clientX - left - width / 2;
+      const y = e.clientY - top - height / 2;
+      mEl.style.transform = `translate(${x}px, ${y}px)`;
     });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
-} else {
-  document.querySelectorAll('.reveal').forEach((element) => element.classList.add('is-visible'));
-}
+  
+    mEl.addEventListener('mouseleave', () => {
+      mEl.style.transform = 'smooth';
+      mEl.style.transform = 'translate(0, 0)';
+    });
+  });
+});
