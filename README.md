@@ -5,8 +5,8 @@ Published on GitHub Pages at https://xsolumx.github.io/CV_Website/.
 ## Structure
 
 - `index.html`: semantic page content; projects, experience, skills and five CV downloads.
-- `style.css`: responsive layout, keyboard focus and reduced-motion/print styles.
-- `script.js`: progressively enhanced mobile navigation and optional project/technology graph.
+- `assets/site.*.css`: responsive layout, keyboard focus and reduced-motion/print styles.
+- `assets/site.*.js`: progressively enhanced mobile navigation and optional project/technology graph.
 - `cv/`: general, full-stack, ML/research, C#/.NET and Java PDFs.
 - `assets/`: portrait and compact SVG favicon.
 - `CV.pdf`: compatibility copy of the general CV.
