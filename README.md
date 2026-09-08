@@ -6,7 +6,7 @@ A static software-engineering CV and portfolio. No runtime frameworks, analytics
 
 ## Editing
 
-Edit page content in `index.html`, styles and behaviour in `src/`, and graph context in `data/skills.json`. Run `node scripts/build-skill-map.cjs` and commit the generated assets and HTML together. CSS controls the graph layout; the script generates its static HTML from the same data, validates exactly 31 connected nodes, fingerprints assets and embeds graph context in one lazy module. Do not hand-edit the generated SKILL_BOARD block.
+Edit page content in `index.html`, styles and behaviour in `src/`, and graph context in `data/skills.json`. Run `node scripts/build-skill-map.cjs` and commit the generated assets and HTML together. CSS controls the graph layout; the script generates its static HTML from the same data, validates exactly 51 connected nodes, fingerprints assets and embeds graph context in one lazy module. Do not hand-edit the generated SKILL_BOARD block.
 
 - `cv/`: the five reviewed CV PDFs. `CV.pdf` is the general-CV compatibility copy.
 - `assets/`: generated CSS/JS, portrait, cropped public-application screenshots and compact SVG favicon.
@@ -15,9 +15,13 @@ Edit page content in `index.html`, styles and behaviour in `src/`, and graph con
 
 ## Content boundaries
 
-The user authorised replacing the historical graph with a more relevant mobile presentation. The current 31-node graph selects reviewed web, ML/research and Java/.NET work. Its 33 edges connect fields to tools, each tool to sibling applications, and tools to shared engineering practices. Solid links are applications; dotted links are shared practice. Avoid connecting sibling capabilities as prerequisite chains. It is not a proficiency score, a prerequisite syllabus, or a complete inventory of every repository. Some private repositories remain unavailable to the connection.
+The current 51-node graph contains one engineering hub, five areas and 45 named capabilities. Its 63 relationships connect tools to applications and shared practices, with ten explained connections between areas. These cross-area lines appear only when an endpoint is selected. They describe conceptual or implementation relationships, not proficiency ratings or prerequisites. The selected areas follow the portfolio: web interfaces, backend/delivery, ML/GPU systems, data/scientific computing, and Java/.NET applications.
 
-The graph reflows into vertical branches on a narrow screen. It uses ordinary HTML buttons, native page scrolling and SVG paths measured from the layout. There is no search, canvas, pan/zoom, simulated layout, icon download or animation loop. On phones, context moves directly after the selected row; closing it restores the default branch note. Desktop notes stay beneath their branch. All labels and project links are available without JavaScript. Connections load only on expansion and update on layout changes/selection; pending frames stop while hidden or offscreen.
+The graph uses a two-panel application row and a three-panel technical row on desktop, and five stacked branches with two-column skills on phones. It retains native page scrolling, large touch targets and ordinary HTML buttons. On phones, details appear after the selected row. Related-skill buttons move to the real node with keyboard focus; Escape or the close button clears selection. Public source links are available in context; private application source stays private. Coursework and prototypes are labelled explicitly.
+
+No search, canvas, force simulation, pan/zoom, icon downloads or animation loop. CSS owns layout; one SVG layer measures node positions in a batched pass. The graph module loads only on expansion. Animation callbacks are scheduled only for layout/selection changes, and stop when collapsed, offscreen or in a hidden tab. Labels and project links remain readable without JavaScript.
+
+The September 2026 expansion rechecked the complete, non-truncated trees of all 13 accessible repositories. Twelve trees matched the previous source audit; the portfolio was the changed repository. Current key implementation files and both notebook sources were reviewed against that inventory. Reading source does not establish individual authorship, current test success or scientific claims. See `docs/skill-evidence.md` for the publication-safe capability map.
 
 Employment dates and degree completion must come from confirmed facts, not commit activity. Keep anonymous client labels and live application links. Omit location, phone and Minecraft scale/revenue claims. Do not copy private source into this public repository. Keep coursework and prototypes identified.
 
