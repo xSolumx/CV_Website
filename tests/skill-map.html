@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Skill map responsive check</title>
 <style>body{font:15px system-ui;margin:20px;background:#e5e8e0;color:#153b2f}header{position:sticky;top:0;z-index:5;background:#e5e8e0;padding-block:10px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:16px}button,select{font:inherit;padding:10px}iframe{display:block;border:1px solid #657b68;background:#f4f3ec;height:844px;max-width:none}pre{white-space:pre-wrap;max-height:220px;overflow:auto}#frame-wrap{overflow:auto;max-width:100%}</style></head>
-<body><header><label>Viewport <select id="size"><option value="390">390 px — phone</option><option value="320">320 px — small phone</option><option value="768">768 px — tablet</option><option value="1280">1280 px — desktop</option></select></label><button id="read" type="button">Read render counters</button><button id="reload" type="button">Reload frame</button><button id="verify" type="button">Verify all graph interactions</button><label><input id="nojs" type="checkbox"> No JavaScript</label></header>
+<body><header><label>Viewport <select id="size"><option value="390">390 px — phone</option><option value="320">320 px — small phone</option><option value="768">768 px — tablet</option><option value="1024">1024 px — small desktop</option><option value="1280">1280 px — desktop</option></select></label><button id="read" type="button">Read render counters</button><button id="reload" type="button">Reload frame</button><button id="verify" type="button">Verify all graph interactions</button><label><input id="nojs" type="checkbox"> No JavaScript</label></header>
 <p>Manual development fixture. Counters describe scheduled animation callbacks, not device frame rate. Native touch and low-end hardware still require device testing.</p><pre id="report" role="status">Loading…</pre><div id="frame-wrap"><iframe id="frame" title="CV website responsive preview" src="../#technical" style="width:390px"></iframe></div>
 <script>
 const frame=document.querySelector('#frame'),report=document.querySelector('#report');let stats;
@@ -38,7 +38,7 @@ document.querySelector('#verify').addEventListener('click',async()=>{
     const note=d.querySelector('.skill-note:not([hidden])');
     check(note?.querySelector('strong').textContent===button.textContent,'Wrong context: '+button.dataset.node);
     check(d.querySelectorAll('[aria-pressed=true]').length===1,'Selection is not unique');
-    if(w.innerWidth<=1020)check(note?.previousElementSibling===(button.closest('.skill-row')||button),'Mobile note is remote: '+button.dataset.node);
+    check(note?.previousElementSibling===(button.closest('.skill-row')||button),'Skill note is remote: '+button.dataset.node);
     const bridge=note?.querySelector('.skill-bridge-link');
     if(bridge){const target=bridge.dataset.jump;bridge.click();jumps++;check(d.activeElement?.dataset.node===target,'Jump focus failed: '+target);check(d.querySelector('[aria-pressed=true]')?.dataset.node===target,'Jump selection failed');}
     d.querySelector('.skill-note:not([hidden]) .skill-dismiss')?.click();
@@ -50,6 +50,11 @@ document.querySelector('#verify').addEventListener('click',async()=>{
   for(const width of [320,390,768,1024,1280]){
     frame.style.width=width+'px';await delay();
     check(d.documentElement.scrollWidth<=w.innerWidth,'Horizontal overflow at '+width);
+    for(const story of d.querySelectorAll('.story-layout')){
+      const intro=story.querySelector('.project-overview').getBoundingClientRect(),visual=story.querySelector('figure').getBoundingClientRect();
+      check(width<=860 ? intro.bottom<=visual.top+1 : visual.left<intro.left,'Project reading order at '+width);
+    }
+
     check(nodes.every(el=>el.scrollWidth<=el.clientWidth+1),'Clipped label at '+width);
     check(nodes.every(el=>el.getBoundingClientRect().height>=44),'Small touch target at '+width);
     check([...d.querySelectorAll('.skill-lines path')].every(el=>el.getAttribute('d')&&!/NaN|undefined/.test(el.getAttribute('d'))),'Invalid edge geometry at '+width);
