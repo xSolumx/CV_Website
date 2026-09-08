@@ -18,13 +18,13 @@
     },
     {
       "id": "rendering",
-      "label": "Rendering & data",
-      "detail": "Server-rendered pages, route prefetching, spreadsheet import/export and reporting data."
+      "label": "Server rendering",
+      "detail": "Server-rendered content and product pages, with route prefetching in the business applications."
     },
     {
       "id": "permissions",
-      "label": "Access & workflows",
-      "detail": "Staff provisioning, role claims, validated enquiry intake and backend permission checks."
+      "label": "Authentication",
+      "detail": "Firebase Authentication for signing in staff and protecting administration workflows."
     },
     {
       "id": "releases",
@@ -73,7 +73,7 @@
     },
     {
       "id": "csharp",
-      "label": "C# & SQL Server",
+      "label": "C# / .NET / SQL",
       "detail": "WinForms coursework with ADO.NET, stored procedures and relational data access."
     },
     {
@@ -88,8 +88,8 @@
     },
     {
       "id": "integration",
-      "label": "APIs & data access",
-      "detail": "Server API integrations, persistent metadata and stored-procedure-based CRUD."
+      "label": "API integration",
+      "detail": "Paper/Bukkit server APIs in Java plugins and ADO.NET database access in C# coursework."
     },
     {
       "id": "spreadsheets",
@@ -155,135 +155,251 @@
   "edges": [
     [
       "engineering",
-      "web"
+      "web",
+      "area"
     ],
     [
       "web",
-      "react"
-    ],
-    [
-      "web",
-      "firebase"
+      "react",
+      "tool"
     ],
     [
       "react",
-      "rendering"
+      "rendering",
+      "application"
+    ],
+    [
+      "react",
+      "spreadsheets",
+      "application"
+    ],
+    [
+      "react",
+      "media",
+      "application"
+    ],
+    [
+      "react",
+      "releases",
+      "practice"
+    ],
+    [
+      "web",
+      "firebase",
+      "tool"
     ],
     [
       "firebase",
-      "permissions"
+      "permissions",
+      "application"
+    ],
+    [
+      "firebase",
+      "roles",
+      "application"
+    ],
+    [
+      "firebase",
+      "enquiries",
+      "application"
+    ],
+    [
+      "firebase",
+      "releases",
+      "practice"
     ],
     [
       "engineering",
-      "ml"
+      "ml",
+      "area"
     ],
     [
       "ml",
-      "torch"
-    ],
-    [
-      "ml",
-      "cuda"
+      "torch",
+      "tool"
     ],
     [
       "torch",
-      "models"
+      "models",
+      "application"
+    ],
+    [
+      "torch",
+      "scans",
+      "application"
+    ],
+    [
+      "torch",
+      "streaming",
+      "application"
+    ],
+    [
+      "torch",
+      "validation",
+      "practice"
+    ],
+    [
+      "ml",
+      "cuda",
+      "tool"
     ],
     [
       "cuda",
-      "kernels"
+      "kernels",
+      "application"
+    ],
+    [
+      "cuda",
+      "autograd",
+      "application"
+    ],
+    [
+      "cuda",
+      "gradients",
+      "application"
+    ],
+    [
+      "cuda",
+      "validation",
+      "practice"
     ],
     [
       "engineering",
-      "applications"
+      "applications",
+      "area"
     ],
     [
       "applications",
-      "java"
-    ],
-    [
-      "applications",
-      "csharp"
+      "java",
+      "tool"
     ],
     [
       "java",
-      "plugins"
+      "plugins",
+      "application"
+    ],
+    [
+      "java",
+      "events",
+      "application"
+    ],
+    [
+      "java",
+      "metadata",
+      "application"
+    ],
+    [
+      "java",
+      "integration",
+      "practice"
+    ],
+    [
+      "applications",
+      "csharp",
+      "tool"
     ],
     [
       "csharp",
-      "desktop"
-    ],
-    [
-      "rendering",
-      "spreadsheets"
-    ],
-    [
-      "permissions",
-      "roles"
-    ],
-    [
-      "spreadsheets",
-      "media"
-    ],
-    [
-      "roles",
-      "enquiries"
-    ],
-    [
-      "media",
-      "releases"
-    ],
-    [
-      "enquiries",
-      "releases"
-    ],
-    [
-      "models",
-      "scans"
-    ],
-    [
-      "kernels",
-      "autograd"
-    ],
-    [
-      "scans",
-      "streaming"
-    ],
-    [
-      "autograd",
-      "gradients"
-    ],
-    [
-      "streaming",
-      "validation"
-    ],
-    [
-      "gradients",
-      "validation"
-    ],
-    [
-      "plugins",
-      "events"
-    ],
-    [
       "desktop",
-      "procedures"
+      "application"
     ],
     [
-      "events",
-      "metadata"
-    ],
-    [
+      "csharp",
       "procedures",
-      "processes"
+      "application"
     ],
     [
-      "metadata",
-      "integration"
-    ],
-    [
+      "csharp",
       "processes",
-      "integration"
+      "application"
+    ],
+    [
+      "csharp",
+      "integration",
+      "practice"
     ]
+  ],
+  "branches": [
+    {
+      "id": "web",
+      "label": "Web applications",
+      "href": "#work",
+      "link": "View application work",
+      "rows": [
+        [
+          "react",
+          "firebase"
+        ],
+        [
+          "rendering",
+          "permissions"
+        ],
+        [
+          "spreadsheets",
+          "roles"
+        ],
+        [
+          "media",
+          "enquiries"
+        ],
+        [
+          "releases"
+        ]
+      ]
+    },
+    {
+      "id": "ml",
+      "label": "ML & research systems",
+      "href": "#research",
+      "link": "View research work",
+      "rows": [
+        [
+          "torch",
+          "cuda"
+        ],
+        [
+          "models",
+          "kernels"
+        ],
+        [
+          "scans",
+          "autograd"
+        ],
+        [
+          "streaming",
+          "gradients"
+        ],
+        [
+          "validation"
+        ]
+      ]
+    },
+    {
+      "id": "applications",
+      "label": "Java & .NET applications",
+      "href": "#more-projects",
+      "link": "View these projects",
+      "rows": [
+        [
+          "java",
+          "csharp"
+        ],
+        [
+          "plugins",
+          "desktop"
+        ],
+        [
+          "events",
+          "procedures"
+        ],
+        [
+          "metadata",
+          "processes"
+        ],
+        [
+          "integration"
+        ]
+      ]
+    }
   ]
 }
