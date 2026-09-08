@@ -90,6 +90,66 @@
       "id": "integration",
       "label": "APIs & data access",
       "detail": "Server API integrations, persistent metadata and stored-procedure-based CRUD."
+    },
+    {
+      "id": "spreadsheets",
+      "label": "Spreadsheet tools",
+      "detail": "Typed spreadsheet import, validation and export for managing product catalogue data."
+    },
+    {
+      "id": "roles",
+      "label": "Staff role claims",
+      "detail": "Firebase Auth custom claims for staff provisioning and backend permission checks."
+    },
+    {
+      "id": "media",
+      "label": "Media processing",
+      "detail": "Image compression, generated thumbnails and asset tracking in product-publishing workflows."
+    },
+    {
+      "id": "enquiries",
+      "label": "Enquiry validation",
+      "detail": "Validated, rate-limited customer enquiry intake with database persistence."
+    },
+    {
+      "id": "scans",
+      "label": "Parallel scans",
+      "detail": "Parallel scan implementations for recurrent state updates, checked against sequential reference execution."
+    },
+    {
+      "id": "autograd",
+      "label": "Custom autograd",
+      "detail": "Custom forward/backward integration connecting GPU scan kernels to PyTorch training."
+    },
+    {
+      "id": "streaming",
+      "label": "Streaming checks",
+      "detail": "Checks that chunked or streaming state updates agree with full-sequence reference execution."
+    },
+    {
+      "id": "gradients",
+      "label": "Gradient checks",
+      "detail": "Numerical and reference comparisons for training gradients, including edge cases."
+    },
+    {
+      "id": "events",
+      "label": "Event handling",
+      "detail": "Paper/Bukkit event handlers for custom item behaviour and inventory interactions."
+    },
+    {
+      "id": "procedures",
+      "label": "Stored procedures",
+      "detail": "SQL Server stored-procedure-based CRUD through ADO.NET in the WinForms coursework."
+    },
+    {
+      "id": "metadata",
+      "label": "Persistent metadata",
+      "detail": "Persistent item metadata and resource-pack JSON parsing in Java plugin implementations."
+    },
+    {
+      "id": "processes",
+      "label": "Process execution",
+      "detail": "Asynchronous process execution and log output in the WPF desktop utility prototype."
     }
   ],
   "edges": [
@@ -114,14 +174,6 @@
       "permissions"
     ],
     [
-      "rendering",
-      "releases"
-    ],
-    [
-      "permissions",
-      "releases"
-    ],
-    [
       "engineering",
       "ml"
     ],
@@ -140,14 +192,6 @@
     [
       "cuda",
       "kernels"
-    ],
-    [
-      "models",
-      "validation"
-    ],
-    [
-      "kernels",
-      "validation"
     ],
     [
       "engineering",
@@ -170,11 +214,75 @@
       "desktop"
     ],
     [
+      "rendering",
+      "spreadsheets"
+    ],
+    [
+      "permissions",
+      "roles"
+    ],
+    [
+      "spreadsheets",
+      "media"
+    ],
+    [
+      "roles",
+      "enquiries"
+    ],
+    [
+      "media",
+      "releases"
+    ],
+    [
+      "enquiries",
+      "releases"
+    ],
+    [
+      "models",
+      "scans"
+    ],
+    [
+      "kernels",
+      "autograd"
+    ],
+    [
+      "scans",
+      "streaming"
+    ],
+    [
+      "autograd",
+      "gradients"
+    ],
+    [
+      "streaming",
+      "validation"
+    ],
+    [
+      "gradients",
+      "validation"
+    ],
+    [
       "plugins",
-      "integration"
+      "events"
     ],
     [
       "desktop",
+      "procedures"
+    ],
+    [
+      "events",
+      "metadata"
+    ],
+    [
+      "procedures",
+      "processes"
+    ],
+    [
+      "metadata",
+      "integration"
+    ],
+    [
+      "processes",
       "integration"
     ]
   ]
