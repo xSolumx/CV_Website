@@ -2,35 +2,27 @@
 
 Published on GitHub Pages at https://xsolumx.github.io/CV_Website/.
 
-## Structure
+A static software-engineering CV and portfolio. No runtime frameworks, analytics, external fonts or build dependencies.
 
-- `index.html`: semantic page content; projects, experience, skills and five CV downloads.
-- `assets/site.*.css`: responsive layout, keyboard focus and reduced-motion/print styles.
-- `assets/site.*.js`: progressively enhanced mobile navigation and optional project/technology graph.
-- `cv/`: general, full-stack, ML/research, C#/.NET and Java PDFs.
-- `assets/`: portrait and compact SVG favicon.
-- `CV.pdf`: compatibility copy of the general CV.
-- Old section pages redirect to their current anchors. `public/` contains redirects for the legacy Firebase hosting configuration.
+## Editing
 
-No build or runtime dependencies. Preview the parent directory with `python3 -m http.server 8080` and open the site directory in a browser. To test the actual project prefix, serve this directory under `/CV_Website/`.
+Edit page content in `index.html`, styles and behaviour in `src/`, and graph context in `data/skills.json`. Run `node scripts/build-skill-map.cjs` and commit the generated assets and HTML together. CSS controls the graph layout; the script fingerprints assets and embeds graph context in one lazy module.
 
-## Publishing and maintenance
+- `cv/`: the five reviewed CV PDFs. `CV.pdf` is the general-CV compatibility copy.
+- `assets/`: generated CSS/JS, portrait and compact SVG favicon.
+- `tests/skill-map.html`: responsive preview at 320, 390, 768 and 1280 px, plus animation-frame counters.
+- Legacy section URLs redirect to current anchors. `public/` redirects the old Firebase host to Pages.
 
-GitHub Pages publishes the repository root from `main`. This repository is now the chosen CV-site destination; the separate `xSolumx.github.io` repository is not modified by this release.
+## Content boundaries
 
-Keep PDF downloads and page copy consistent. Employment dates and degree completion must come from confirmed facts. Do not infer them from commit activity. Keep client labels anonymous, preserve the live links, and omit personal location, phone number and Minecraft scale claims. Private repository source is not copied into this public website.
+The user authorised replacing the historical graph with a more relevant mobile presentation. The current 19-node graph selects reviewed web, ML/research and Java/.NET work. Its 21 edges connect fields to tools, then techniques and practice. It is not a proficiency score, a prerequisite syllabus, or a complete inventory of every repository. Some private repositories remain unavailable to the connection.
 
-The original Firebase configuration and workflows are retained. Their hosting directory redirects to the Pages site rather than retaining a second, stale CV. Existing workflow credential/permission failures do not establish a Pages deployment failure.
+The graph reflows into vertical branches on a narrow screen. It uses ordinary HTML buttons, native page scrolling and SVG paths measured from the layout. There is no search, canvas, pan/zoom, simulated layout, icon download or animation loop. Context appears within the selected branch. All labels and project links are available without JavaScript. Connections load only on expansion and update on layout changes/selection; pending frames stop while hidden or offscreen.
 
-The full skill graph restores all 58 original topics, 235 distinct directed connections and 70 prerequisite references from `xSolumx/xSolumx.github.io` at `1c4a874`. Topic links describe relationships, not proficiency ratings. Primary content, navigation and CV links remain available without JavaScript. No third-party analytics or external font scripts are loaded.
+Employment dates and degree completion must come from confirmed facts, not commit activity. Keep anonymous client labels and live application links. Omit location, phone and Minecraft scale/revenue claims. Do not copy private source into this public repository. Keep coursework and prototypes identified.
 
+## Deployment and verification
 
-## Full skill graph
+GitHub Pages publishes the root of `main`. The separate `xSolumx.github.io` repository is not modified. Existing Firebase configuration/functions/workflows are preserved; their hosting folder points visitors to this Pages site.
 
-Edit `data/skills.json` and `src/`, then run `node scripts/build-skill-map.cjs`. The build assigns deterministic coordinates and fingerprints the browser assets. It bundles the graph data and renderer into a single module, fetched only when the graph is opened. Commit the generated assets and updated HTML together. CV files are unaffected.
-
-The source had 247 connection records representing 235 distinct directed endpoint pairs. All 235 are preserved, along with the 70 prerequisite references. Reciprocal/overlapping relationships share a visual segment: there are 236 unique undirected paths after prerequisite links are included. The renderer batches these into one background SVG path and one selected-connection path.
-
-Rendering has no simulation, icon images, glow filters, timers or idle animation. Pointer events coalesce into one pending animation frame, updating only the SVG viewBox. Closing the graph, hiding the document or scrolling it offscreen cancels pending work. Mobile page scrolling remains native until the user explicitly enables Move map; that mode supports pointer pan and pinch. Area focus, search, zoom controls and a full text list provide alternatives to targeting small overview nodes.
-
-`tests/skill-map.html` is a manual responsive fixture with 320/390/768/1280 px viewports. It instruments animation-frame scheduling inside the embedded page and can submit a burst of 20 zoom requests. Its counters are not FPS or a physical-device benchmark. Check that the graph is absent before expansion, appears once on expansion, remains idle afterwards, coalesces burst requests, and stops on collapse. Test search, area focus, selection, arrow-key navigation, Fit all and mobile scrolling. Native touch still merits a real-device check.
+Check both desktop and phone widths, labels and touch-target sizes, keyboard selection, graph connections after reflow, the five PDF links, legacy links, and the no-JavaScript reading path. The responsive fixture measures callback scheduling, not physical-device FPS.
