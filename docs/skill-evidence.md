@@ -30,7 +30,9 @@ The ML pass examined the monorepo's associative-scan, equivariance, structured-m
 
 Both CMS implementations support content modelling, validation, rich-text and media editing, editorial states, publication windows, staff permissions, bulk operations, caching and reporting. These are implemented application capabilities, not a security certification or a claim about business outcomes.
 
-React is visible in the reviewed applications; Next.js is retained from earlier CV material. Ebook translation, one-shot plant recognition/categorisation and weather-informed nursery tooling using Open-Meteo are retained from the user's account of their work. Their uninspected internals, model choices, providers, results and completion status are not inferred. Coursework and prototype context remains visible where relevant.
+React is visible in the reviewed applications; Next.js is retained from earlier CV material. At the user's request, this content pass defers the inaccessible translation, plant-recognition and weather-tooling projects. The existing Applied ML and Computer vision capabilities remain, now described using the accessible classification notebook. This is a temporary publication boundary, not a judgment that other experience is absent.
+
+The animal-classification notebook implements data preparation, a Keras CNN, validation diagnostics and model save/reload/inference. Its augmentation and callback definitions are not evidence that those features run: the inspected fit call does not use the defined callbacks, and augmentation is commented out. No accuracy score, deployed product or untouched-test evaluation is claimed.
 
 ## Node descriptions
 
@@ -47,46 +49,46 @@ React is visible in the reviewed applications; Next.js is retained from earlier 
 | Content modelling | Web & business applications | Structured product, article, guide, campaign and settings records with validation, metadata and links between entities. |
 | Data validation | Web & business applications | Form and import validation, enquiry rate limits, stale-write checks and partial-failure handling in bulk operations. |
 | Editorial workflows | Web & business applications | Drafts, publication windows, preview, archive/restore and guards against losing unsaved edits. |
-| Business workflows | Web & business applications | Product, pricing, stock, staff and enquiry operations translate day-to-day business needs into software. |
+| Application state | Web & business applications | Form state, loading and error states, query-cache updates and mutations keep editors in step with backend data. |
 | Rich-text editing | Web & business applications | Article editors combine formatted content, uploaded images, metadata and preview/quality feedback. |
 | Analytics & reporting | Web & business applications | Consent-aware event collection, batching/retries, backend aggregation and administration dashboards. |
 | Media libraries | Web & business applications | Reusable asset selection and uploads, image compression, WebP thumbnails, alt text and reference-aware deletion. |
 | SSR & caching | Web & business applications | Server rendering, route prefetching, query-cache hydration and invalidation after content changes. |
-| Bulk data tools | Web & business applications | Spreadsheet imports and exports, partial-record updates, inline editing and bulk publication with per-record outcomes. |
+| Data import & export | Web & business applications | Spreadsheet imports, structured exports and partial-record updates, with validation and per-record feedback for bulk operations. |
 | Accessible UI | Web & business applications | Keyboard interaction, dialog focus management, Escape handling and restoration of focus. |
 | Responsive UI | Web & business applications | HTML and CSS layouts for public pages, administration tools and mobile interfaces. |
-| ML & research engineering | Area of work | Neural architectures, learned memory, GPU execution and controlled experiments, alongside language and vision projects. |
+| ML & research engineering | Area of work | Applied image classification and independent research into neural architectures, learned memory, GPU execution and controlled evaluation. |
 | Python | ML projects & independent research | Model implementations, data preparation, experiment runners and scientific-computing tools. |
 | C++ & CUDA | ML projects & independent research | Native PyTorch extensions and GPU kernels for recurrent-state computation and training gradients. |
 | PyTorch | ML projects & independent research | Trainable modules, optimisers, tensor operations and custom execution paths for neural models. |
 | Triton | ML projects & independent research | GPU kernels for structured scans and selected-state memory updates, including a separate fused inference path. |
-| Neural models | ML projects & independent research | State-space and recurrent language models, structured memory and geometric layers implemented as experimental model families. |
-| ML compiler systems | ML projects & independent research | Typed execution plans choose eager, scalar or tiled GPU paths using algebraic constraints, tensor shapes, precision and measured hardware profiles. |
+| Neural architectures | ML projects & independent research | Experimental state-space and recurrent language models, with structured memory and geometric layers. |
+| ML compiler systems | ML projects & independent research | Model-specific execution planning and dispatch: typed plans select eager or GPU paths using tensor shape, precision, algebraic constraints and hardware profiles. |
 | Memory & retrieval | ML projects & independent research | Learned addressing, hard/soft routing, delta updates and hierarchical memory; retrieval quality is measured separately from kernel cost. |
 | Parallel scans | ML projects & independent research | Associative transition composition and ordered parallel-prefix algorithms for recurrent state updates. |
 | Geometric ML | ML projects & independent research | Equivariant operators, group representations and geometric algebra inform structured neural layers and controlled learning experiments. |
 | Custom autograd | ML projects & independent research | Native forward/backward kernels integrate with PyTorch training, with gradients compared against reference implementations. |
 | JAX & Flax | ML projects & independent research | Differentiable geometric operations, recurrent scans and Flax model modules in a separate backend. |
 | GPU profiling | ML projects & independent research | CPU/CUDA profiling, synchronised timing, warm-up, peak-memory measurements and comparisons of launch and compute costs. |
-| TensorFlow & Keras | ML projects & independent research | Convolutional image-classification models, tf.data batching/prefetching and validation diagnostics. |
+| TensorFlow & Keras | Applied ML · image-classification coursework | Convolutional image-classification models, tf.data batching/prefetching and validation diagnostics. |
 | Training pipelines | ML projects & independent research | Deterministic dataset splits, sampled batches, optimiser steps, fixed evaluation batches, checkpoints and structured experiment outputs. |
-| Computer vision | ML projects & independent research | Image preprocessing, convolutional classification and evaluation, with broader plant detection/categorisation project work. |
+| Computer vision | Applied ML · image-classification coursework | Image decoding, resizing and normalisation, convolutional classification, class predictions and confusion-matrix diagnostics. |
 | Experiment design | ML projects & independent research | Matched baselines, ablations, held-out cohorts and multiple seeds separate architectural effects from implementation and optimisation effects. |
-| Language & vision apps | ML projects & independent research | Project work includes an ebook translation programme and one-shot plant detection and categorisation models and an app. |
-| Numerical methods | ML projects & independent research | Linear algebra, reference-output and gradient checks, streaming equivalence, plus symbolic/exact arithmetic with SymPy and FLINT. |
+| Applied ML | Applied ML · image-classification coursework | Taking a labelled image dataset through preprocessing, classifier training, validation and saved-model inference. |
+| Numerical validation | ML projects & independent research | Reference-output comparisons, gradient checks, tolerances and streaming equivalence; symbolic and exact arithmetic support the geometric research. |
 | Reproducible research | ML projects & independent research | Pinned data identities, explicit configurations, validation scripts and artifact manifests keep experiments traceable. |
 | Software & systems | Area of work | Java and .NET applications, data work and the engineering practices used to build, debug and release software. |
 | Java | Application work & engineering practice | Event-driven server plugins, commands, custom interfaces and Paper/Bukkit integration. |
 | C# & .NET | Application work & engineering practice | Windows applications and relational data access through WinForms coursework and a WPF utility prototype. |
 | Event-driven code | Application work & engineering practice | Plugin events, persistent item metadata, resource-pack JSON parsing and inventory interactions. |
 | SQL & data access | Application work & engineering practice | SQL Server stored-procedure calls, parameterised CRUD, ADO.NET adapters and data tables in C# coursework. |
-| API integration | Application work & engineering practice | Application services, Paper/Bukkit and Vault integration, plus Open-Meteo-based weather and forecasting work in nursery tooling. |
+| API integration | Application work & engineering practice | Connecting application services and server APIs, including backend enquiry handling and Paper/Bukkit integrations. |
 | Desktop apps | Application work & engineering practice | WinForms student/module management and WPF process execution with asynchronous output and UI dispatch. |
 | Linux | Application work & engineering practice | Server administration, command-line workflows and Linux/WSL development environments. |
 | Data analysis | Application work & engineering practice | Pandas/NumPy preparation and exploration, with Matplotlib/Seaborn visualisation and notebook-based analysis. |
 | Git & CI/CD | Application work & engineering practice | Version control, automated release gates, dependency/build checks, SHA-256 manifests and immutable-asset verification. |
 | Automated testing | Application work & engineering practice | Unit, integration, access-rule and numerical tests check behaviour and failure cases across application and research code. |
-| Performance debugging | Application work & engineering practice | Investigating application behaviour, process output, server issues and computational bottlenecks. |
+| Debugging & diagnostics | Application work & engineering practice | Using logs, process output, tests and profiling to investigate application failures, server behaviour and computational bottlenecks. |
 
 ## Optional public links
 

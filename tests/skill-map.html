@@ -38,7 +38,7 @@ document.querySelector('#verify').addEventListener('click',async()=>{
     const note=d.querySelector('.skill-note:not([hidden])');
     check(note?.querySelector('strong').textContent===button.textContent,'Wrong context: '+button.dataset.node);
     check(d.querySelectorAll('[aria-pressed=true]').length===1,'Selection is not unique');
-    if(w.innerWidth<=900)check(note?.previousElementSibling===(button.closest('.skill-row')||button),'Mobile note is remote: '+button.dataset.node);
+    if(w.innerWidth<=1020)check(note?.previousElementSibling===(button.closest('.skill-row')||button),'Mobile note is remote: '+button.dataset.node);
     const bridge=note?.querySelector('.skill-bridge-link');
     if(bridge){const target=bridge.dataset.jump;bridge.click();jumps++;check(d.activeElement?.dataset.node===target,'Jump focus failed: '+target);check(d.querySelector('[aria-pressed=true]')?.dataset.node===target,'Jump selection failed');}
     d.querySelector('.skill-note:not([hidden]) .skill-dismiss')?.click();
@@ -47,7 +47,7 @@ document.querySelector('#verify').addEventListener('click',async()=>{
   nodes[0].click();nodes[0].dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));
   check(d.querySelectorAll('[aria-pressed=true]').length===0,'Escape failed');
   atlas.scrollIntoView();await delay();
-  for(const width of [320,390,768,1280]){
+  for(const width of [320,390,768,1024,1280]){
     frame.style.width=width+'px';await delay();
     check(d.documentElement.scrollWidth<=w.innerWidth,'Horizontal overflow at '+width);
     check(nodes.every(el=>el.scrollWidth<=el.clientWidth+1),'Clipped label at '+width);
@@ -59,6 +59,6 @@ document.querySelector('#verify').addEventListener('click',async()=>{
   atlas.open=false;await delay();const closed=stats.executed;await delay();check(stats.executed===closed,'Animation continues while collapsed');
   atlas.open=true;atlas.scrollIntoView();await delay();await delay();
   check(w.performance.getEntriesByType('resource').filter(e=>/skill-map.*\.js/.test(e.name)).length===1,'Graph module loaded more than once');
-  report.textContent=JSON.stringify({passed:failures.length===0,failures,selections,jumps,widths:[320,390,768,1280],nodes:51,edges:61,pending:stats.pending.size},null,2);
+  report.textContent=JSON.stringify({passed:failures.length===0,failures,selections,jumps,widths:[320,390,768,1024,1280],nodes:51,edges:61,pending:stats.pending.size},null,2);
 });
 </script></body></html>
