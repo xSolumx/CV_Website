@@ -68,7 +68,7 @@ export function mount(root) {
     notes.forEach((note,area) => {
       const branch=note.closest('.skill-branch');
       const active=selected && areas.get(selected)===area && elements.get(selected);
-      if(narrow.matches && active) (active.closest('.skill-row') || active).after(note);
+      if(active) (active.closest('.skill-row') || active).after(note);
       else branch.querySelector('.skill-work-link').before(note);
     });
   }
