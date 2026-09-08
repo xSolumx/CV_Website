@@ -15,7 +15,7 @@ Edit page content in `index.html`, styles and behaviour in `src/`, and graph con
 
 ## Content boundaries
 
-The user authorised replacing the historical graph with a more relevant mobile presentation. The current 19-node graph selects reviewed web, ML/research and Java/.NET work. Its 21 edges connect fields to tools, then techniques and practice. It is not a proficiency score, a prerequisite syllabus, or a complete inventory of every repository. Some private repositories remain unavailable to the connection.
+The user authorised replacing the historical graph with a more relevant mobile presentation. The current 31-node graph selects reviewed web, ML/research and Java/.NET work. Its 33 edges connect fields to tools, then techniques and practice. It is not a proficiency score, a prerequisite syllabus, or a complete inventory of every repository. Some private repositories remain unavailable to the connection.
 
 The graph reflows into vertical branches on a narrow screen. It uses ordinary HTML buttons, native page scrolling and SVG paths measured from the layout. There is no search, canvas, pan/zoom, simulated layout, icon download or animation loop. Context appears within the selected branch. All labels and project links are available without JavaScript. Connections load only on expansion and update on layout changes/selection; pending frames stop while hidden or offscreen.
 
