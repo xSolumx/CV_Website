@@ -21,22 +21,31 @@
     if (!atlas?.open || mounted) return;
     const status = atlas.querySelector('.skill-status');
     const retry = atlas.querySelector('.skill-retry');
-    status.textContent = 'Loading the full skill graph…';
+    status.textContent = ''; 
     retry.hidden = true;
     try {
       pending ||= import('./skill-map.js');
       const graph = await pending;
       if (!atlas.open || mounted) return;
-      atlas.querySelector('.skill-interactive').hidden = false;
       graph.mount(atlas);
       mounted = true;
     } catch (error) {
       pending = null;
-      status.textContent = 'The graph could not load. Retry, or browse every skill in the text list below.';
+      status.textContent = 'The connections could not load. The skills and project links are still available.';
       retry.hidden = false;
     }
   }
   atlas?.addEventListener('toggle', openGraph);
   atlas?.querySelector('.skill-retry').addEventListener('click', openGraph);
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link) return;
+    const target = document.getElementById(link.getAttribute('href').slice(1));
+    if (target?.tagName === 'DETAILS') target.open = true;
+  });
+  if (location.hash) {
+    const target = document.getElementById(location.hash.slice(1));
+    if (target?.tagName === 'DETAILS') target.open = true;
+  }
   openGraph();
 })();
