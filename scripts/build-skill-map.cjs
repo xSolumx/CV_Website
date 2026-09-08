@@ -33,9 +33,7 @@ const branchHtml=data.branches.map((b,i)=>`<section class="skill-branch" data-ar
 const boardHtml=`<div class="skill-board"><svg class="skill-lines" aria-hidden="true"></svg><div class="skill-origin"><span>Software engineering</span><small>Three connected areas of work</small></div><div class="skill-branches">${branchHtml}</div></div><p class="skill-legend"><span class="legend-line" aria-hidden="true"></span>Tools & applications <span class="legend-line dotted" aria-hidden="true"></span>Shared practices</p><p class="skill-announcement sr-only" role="status" aria-live="polite"></p>`;
 // Fingerprint the complete lazy module as one request, including its data.
 const assets = path.join(root,'assets');
-for(const file of fs.readdirSync(assets)) {
-  if(/^(site\.|skill-map).*\.(js|css)$/.test(file))fs.unlinkSync(path.join(assets,file));
-}
+// Retain fingerprinted assets so cached HTML can still load its matching code.
 function emit(name,ext,content) {
   const hash=crypto.createHash('sha256').update(content).digest('hex').slice(0,10);
   const file=`${name}.${hash}.${ext}`;fs.writeFileSync(path.join(assets,file),content);return file;

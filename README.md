@@ -6,7 +6,7 @@ A static software-engineering CV and portfolio. No runtime frameworks, analytics
 
 ## Editing
 
-Edit page content in `index.html`, styles and behaviour in `src/`, and graph context in `data/skills.json`. Run `node scripts/build-skill-map.cjs` and commit the generated assets and HTML together. CSS controls the graph layout; the script generates its static HTML from the same data, validates exactly 51 connected nodes, fingerprints assets and embeds graph context in one lazy module. Do not hand-edit the generated SKILL_BOARD block.
+Edit page content in `index.html`, styles and behaviour in `src/`, and graph context in `data/skills.json`. Run `node scripts/build-skill-map.cjs` and commit the generated assets and HTML together. CSS controls the graph layout; the script generates its static HTML from the same data, validates exactly 51 connected nodes, fingerprints assets, retains older fingerprints for cached pages, and embeds graph context in one lazy module. Do not hand-edit the generated SKILL_BOARD block.
 
 - `cv/`: the five reviewed CV PDFs. `CV.pdf` is the general-CV compatibility copy.
 - `assets/`: generated CSS/JS, portrait, cropped public-application screenshots and compact SVG favicon.
