@@ -22,4 +22,15 @@ Keep PDF downloads and page copy consistent. Employment dates and degree complet
 
 The original Firebase configuration and workflows are retained. Their hosting directory redirects to the Pages site rather than retaining a second, stale CV. Existing workflow credential/permission failures do not establish a Pages deployment failure.
 
-The map is a curated set of actual project relationships, not a proficiency rating or a claim that every historical skill-tree topic has been verified. Primary content, navigation and CV links remain available without JavaScript. No third-party analytics or external font scripts are loaded.
+The full skill graph restores all 58 original topics, 235 distinct directed connections and 70 prerequisite references from `xSolumx/xSolumx.github.io` at `1c4a874`. Topic links describe relationships, not proficiency ratings. Primary content, navigation and CV links remain available without JavaScript. No third-party analytics or external font scripts are loaded.
+
+
+## Full skill graph
+
+Edit `data/skills.json` and `src/`, then run `node scripts/build-skill-map.cjs`. The build assigns deterministic coordinates and fingerprints the browser assets. It bundles the graph data and renderer into a single module, fetched only when the graph is opened. Commit the generated assets and updated HTML together. CV files are unaffected.
+
+The source had 247 connection records representing 235 distinct directed endpoint pairs. All 235 are preserved, along with the 70 prerequisite references. Reciprocal/overlapping relationships share a visual segment: there are 236 unique undirected paths after prerequisite links are included. The renderer batches these into one background SVG path and one selected-connection path.
+
+Rendering has no simulation, icon images, glow filters, timers or idle animation. Pointer events coalesce into one pending animation frame, updating only the SVG viewBox. Closing the graph, hiding the document or scrolling it offscreen cancels pending work. Mobile page scrolling remains native until the user explicitly enables Move map; that mode supports pointer pan and pinch. Area focus, search, zoom controls and a full text list provide alternatives to targeting small overview nodes.
+
+`tests/skill-map.html` is a manual responsive fixture with 320/390/768/1280 px viewports. It instruments animation-frame scheduling inside the embedded page and can submit a burst of 20 zoom requests. Its counters are not FPS or a physical-device benchmark. Check that the graph is absent before expansion, appears once on expansion, remains idle afterwards, coalesces burst requests, and stops on collapse. Test search, area focus, selection, arrow-key navigation, Fit all and mobile scrolling. Native touch still merits a real-device check.
