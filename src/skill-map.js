@@ -16,7 +16,7 @@ export function mount(root) {
     adjacent.get(edge[0]).push({id:edge[1],edge});
     adjacent.get(edge[1]).push({id:edge[0],edge});
   });
-  const narrow = matchMedia('(max-width:900px)');
+  const narrow = matchMedia('(max-width:1020px)');
   const announcement = root.querySelector('.skill-announcement');
   let selected = null, frame = 0, visible = true;
   const paths = data.edges.map(([from,to,relation]) => {

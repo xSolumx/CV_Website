@@ -1,5 +1,5 @@
 {
-  "description": "Three areas of work: 47 capabilities, three area nodes and one engineering hub. Skills draw on reviewed implementation, earlier CV material and user-described projects; public repository access is not a condition of inclusion.",
+  "description": "Three areas of work: 47 capabilities, three area nodes and one engineering hub. Public source links are optional. Project descriptions in this revision use accessible implementation and retained CV context.",
   "nodes": [
     {
       "id": "web",
@@ -63,8 +63,8 @@
     },
     {
       "id": "business",
-      "label": "Business workflows",
-      "detail": "Product, pricing, stock, staff and enquiry operations translate day-to-day business needs into software.",
+      "label": "Application state",
+      "detail": "Form state, loading and error states, query-cache updates and mutations keep editors in step with backend data.",
       "context": "Web & business applications"
     },
     {
@@ -93,8 +93,8 @@
     },
     {
       "id": "spreadsheets",
-      "label": "Bulk data tools",
-      "detail": "Spreadsheet imports and exports, partial-record updates, inline editing and bulk publication with per-record outcomes.",
+      "label": "Data import & export",
+      "detail": "Spreadsheet imports, structured exports and partial-record updates, with validation and per-record feedback for bulk operations.",
       "context": "Web & business applications"
     },
     {
@@ -112,7 +112,7 @@
     {
       "id": "ml",
       "label": "ML & research engineering",
-      "detail": "Neural architectures, learned memory, GPU execution and controlled experiments, alongside language and vision projects.",
+      "detail": "Applied image classification and independent research into neural architectures, learned memory, GPU execution and controlled evaluation.",
       "context": "Area of work"
     },
     {
@@ -141,14 +141,14 @@
     },
     {
       "id": "architectures",
-      "label": "Neural models",
-      "detail": "State-space and recurrent language models, structured memory and geometric layers implemented as experimental model families.",
+      "label": "Neural architectures",
+      "detail": "Experimental state-space and recurrent language models, with structured memory and geometric layers.",
       "context": "ML projects & independent research"
     },
     {
       "id": "compilers",
       "label": "ML compiler systems",
-      "detail": "Typed execution plans choose eager, scalar or tiled GPU paths using algebraic constraints, tensor shapes, precision and measured hardware profiles.",
+      "detail": "Model-specific execution planning and dispatch: typed plans select eager or GPU paths using tensor shape, precision, algebraic constraints and hardware profiles.",
       "context": "ML projects & independent research",
       "source": "https://github.com/xSolumx/AI_Culture_Mind/blob/main/SSM-Models/pure_spin8_ssm/compiler.py"
     },
@@ -194,7 +194,7 @@
       "id": "tensorflow",
       "label": "TensorFlow & Keras",
       "detail": "Convolutional image-classification models, tf.data batching/prefetching and validation diagnostics.",
-      "context": "ML projects & independent research"
+      "context": "Applied ML · image-classification coursework"
     },
     {
       "id": "training",
@@ -205,8 +205,8 @@
     {
       "id": "vision",
       "label": "Computer vision",
-      "detail": "Image preprocessing, convolutional classification and evaluation, with broader plant detection/categorisation project work.",
-      "context": "ML projects & independent research"
+      "detail": "Image decoding, resizing and normalisation, convolutional classification, class predictions and confusion-matrix diagnostics.",
+      "context": "Applied ML · image-classification coursework"
     },
     {
       "id": "experiments",
@@ -217,14 +217,14 @@
     },
     {
       "id": "applied",
-      "label": "Language & vision apps",
-      "detail": "Project work includes an ebook translation programme and one-shot plant detection and categorisation models and an app.",
-      "context": "ML projects & independent research"
+      "label": "Applied ML",
+      "detail": "Taking a labelled image dataset through preprocessing, classifier training, validation and saved-model inference.",
+      "context": "Applied ML · image-classification coursework"
     },
     {
       "id": "numerical",
-      "label": "Numerical methods",
-      "detail": "Linear algebra, reference-output and gradient checks, streaming equivalence, plus symbolic/exact arithmetic with SymPy and FLINT.",
+      "label": "Numerical validation",
+      "detail": "Reference-output comparisons, gradient checks, tolerances and streaming equivalence; symbolic and exact arithmetic support the geometric research.",
       "context": "ML projects & independent research"
     },
     {
@@ -266,7 +266,7 @@
     {
       "id": "integration",
       "label": "API integration",
-      "detail": "Application services, Paper/Bukkit and Vault integration, plus Open-Meteo-based weather and forecasting work in nursery tooling.",
+      "detail": "Connecting application services and server APIs, including backend enquiry handling and Paper/Bukkit integrations.",
       "context": "Application work & engineering practice"
     },
     {
@@ -301,8 +301,8 @@
     },
     {
       "id": "debugging",
-      "label": "Performance debugging",
-      "detail": "Investigating application behaviour, process output, server issues and computational bottlenecks.",
+      "label": "Debugging & diagnostics",
+      "detail": "Using logs, process output, tests and profiling to investigate application failures, server behaviour and computational bottlenecks.",
       "context": "Application work & engineering practice"
     }
   ],
@@ -383,7 +383,7 @@
       "application"
     ],
     [
-      "firebase",
+      "react",
       "business",
       "application"
     ],
@@ -433,7 +433,7 @@
       "application"
     ],
     [
-      "python",
+      "tensorflow",
       "applied",
       "application"
     ],
@@ -668,7 +668,7 @@
     {
       "id": "ml",
       "label": "ML & research engineering",
-      "href": "#research",
+      "href": "#machine-learning",
       "link": "Explore ML & research",
       "rows": [
         [
