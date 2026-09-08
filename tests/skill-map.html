@@ -28,8 +28,9 @@ document.querySelector('#verify').addEventListener('click',async()=>{
   for(let i=0;i<100 && !atlas.classList.contains('skill-ready');i++)await delay();
   if(!atlas.classList.contains('skill-ready')){report.textContent='Graph did not activate within 10 seconds.';return;}
   const nodes=[...d.querySelectorAll('[data-node]')];
+  check(d.querySelectorAll('.skill-branch').length===3,'Expected three areas');
   check(nodes.length===50 && d.querySelectorAll('.skill-origin').length===1,'Expected 51 nodes');
-  check(d.querySelectorAll('.skill-lines path').length===63,'Expected 63 edges');
+  check(d.querySelectorAll('.skill-lines path').length===61,'Expected 61 edges');
   check(d.querySelectorAll('[data-node]:disabled').length===0,'Graph failed to activate');
   let selections=0,jumps=0;
   for(const button of nodes){
@@ -58,6 +59,6 @@ document.querySelector('#verify').addEventListener('click',async()=>{
   atlas.open=false;await delay();const closed=stats.executed;await delay();check(stats.executed===closed,'Animation continues while collapsed');
   atlas.open=true;atlas.scrollIntoView();await delay();await delay();
   check(w.performance.getEntriesByType('resource').filter(e=>/skill-map.*\.js/.test(e.name)).length===1,'Graph module loaded more than once');
-  report.textContent=JSON.stringify({passed:failures.length===0,failures,selections,jumps,widths:[320,390,768,1280],nodes:51,edges:63,pending:stats.pending.size},null,2);
+  report.textContent=JSON.stringify({passed:failures.length===0,failures,selections,jumps,widths:[320,390,768,1280],nodes:51,edges:61,pending:stats.pending.size},null,2);
 });
 </script></body></html>

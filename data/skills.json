@@ -1,332 +1,309 @@
 {
-  "description": "Selected capabilities grounded in accessible implementation and notebook evidence. Includes five areas and one engineering hub; not proficiency ratings or an exhaustive account inventory.",
+  "description": "Three areas of work: 47 capabilities, three area nodes and one engineering hub. Skills draw on reviewed implementation, earlier CV material and user-described projects; public repository access is not a condition of inclusion.",
   "nodes": [
     {
       "id": "web",
-      "label": "Web interfaces",
-      "detail": "Catalogue interfaces, accessible interactions and server-rendered pages in the business applications.",
+      "label": "Full-stack & CMS",
+      "detail": "Custom content-management systems, business workflows and the interfaces and services that connect them.",
       "context": "Area of work"
     },
     {
       "id": "react",
-      "label": "React & TypeScript",
-      "detail": "Typed components, application state and staff-facing product tools.",
-      "context": "Business applications"
+      "label": "React & Next.js",
+      "detail": "Component-based React interfaces and broader Next.js web-project experience.",
+      "context": "Web & business applications"
     },
     {
-      "id": "html",
-      "label": "HTML & CSS",
-      "detail": "Semantic page structure and responsive styling for public pages and administration interfaces.",
-      "context": "Business applications"
+      "id": "node",
+      "label": "Node.js APIs",
+      "detail": "Server-side JavaScript and TypeScript, Firebase Cloud Functions and application-service handlers.",
+      "context": "Web & business applications"
+    },
+    {
+      "id": "typescript",
+      "label": "TypeScript",
+      "detail": "Typed domain models, component contracts, state transitions and service boundaries.",
+      "context": "Web & business applications"
+    },
+    {
+      "id": "firebase",
+      "label": "Firebase & Firestore",
+      "detail": "Authentication, document storage, queries and Cloud Functions for application workflows.",
+      "context": "Web & business applications"
+    },
+    {
+      "id": "cms",
+      "label": "Custom CMSs",
+      "detail": "Administration systems for products, articles, media, staff and site settings, with reusable editors and service modules.",
+      "context": "Web & business applications"
+    },
+    {
+      "id": "roles",
+      "label": "Auth & roles",
+      "detail": "Staff provisioning, custom claims and backend permission checks distinguish administration from content editing.",
+      "context": "Web & business applications"
+    },
+    {
+      "id": "content",
+      "label": "Content modelling",
+      "detail": "Structured product, article, guide, campaign and settings records with validation, metadata and links between entities.",
+      "context": "Web & business applications"
+    },
+    {
+      "id": "validation",
+      "label": "Data validation",
+      "detail": "Form and import validation, enquiry rate limits, stale-write checks and partial-failure handling in bulk operations.",
+      "context": "Web & business applications"
+    },
+    {
+      "id": "editorial",
+      "label": "Editorial workflows",
+      "detail": "Drafts, publication windows, preview, archive/restore and guards against losing unsaved edits.",
+      "context": "Web & business applications"
+    },
+    {
+      "id": "business",
+      "label": "Business workflows",
+      "detail": "Product, pricing, stock, staff and enquiry operations translate day-to-day business needs into software.",
+      "context": "Web & business applications"
+    },
+    {
+      "id": "richtext",
+      "label": "Rich-text editing",
+      "detail": "Article editors combine formatted content, uploaded images, metadata and preview/quality feedback.",
+      "context": "Web & business applications"
+    },
+    {
+      "id": "analytics",
+      "label": "Analytics & reporting",
+      "detail": "Consent-aware event collection, batching/retries, backend aggregation and administration dashboards.",
+      "context": "Web & business applications"
+    },
+    {
+      "id": "media",
+      "label": "Media libraries",
+      "detail": "Reusable asset selection and uploads, image compression, WebP thumbnails, alt text and reference-aware deletion.",
+      "context": "Web & business applications"
     },
     {
       "id": "rendering",
-      "label": "Server rendering",
-      "detail": "React server entry points render routes to HTML and dehydrate the query cache for the browser.",
-      "context": "Business applications"
+      "label": "SSR & caching",
+      "detail": "Server rendering, route prefetching, query-cache hydration and invalidation after content changes.",
+      "context": "Web & business applications"
     },
     {
-      "id": "responsive",
-      "label": "Responsive layouts",
-      "detail": "CSS layouts adapt catalogue, navigation and content interfaces across screen sizes.",
-      "context": "Business applications"
-    },
-    {
-      "id": "prefetch",
-      "label": "Route prefetching",
-      "detail": "Route-specific data and component preloading prepare server-rendered product and content pages.",
-      "context": "Business applications"
+      "id": "spreadsheets",
+      "label": "Bulk data tools",
+      "detail": "Spreadsheet imports and exports, partial-record updates, inline editing and bulk publication with per-record outcomes.",
+      "context": "Web & business applications"
     },
     {
       "id": "accessibility",
       "label": "Accessible UI",
-      "detail": "Dialog focus management, Escape handling and restoration of focus in React interfaces.",
-      "context": "Business applications"
+      "detail": "Keyboard interaction, dialog focus management, Escape handling and restoration of focus.",
+      "context": "Web & business applications"
     },
     {
-      "id": "spreadsheets",
-      "label": "Spreadsheet tools",
-      "detail": "Import and export of typed product records, with required-column checks and controlled updates.",
-      "context": "Business applications"
-    },
-    {
-      "id": "media",
-      "label": "Media processing",
-      "detail": "Image compression, WebP thumbnails, dimensions and reference checks in media-publishing workflows.",
-      "context": "Business applications"
-    },
-    {
-      "id": "catalogue",
-      "label": "Catalogue workflows",
-      "detail": "Staff interfaces for editing product information, pricing and stock.",
-      "context": "Business applications"
-    },
-    {
-      "id": "backend",
-      "label": "Backend & delivery",
-      "detail": "Customer intake, staff permissions, analytics and checked release workflows.",
-      "context": "Area of work"
-    },
-    {
-      "id": "functions",
-      "label": "Cloud Functions",
-      "detail": "Firebase callable and server-side handlers implement privileged application operations.",
-      "context": "Business applications"
-    },
-    {
-      "id": "releases",
-      "label": "CI & release gates",
-      "detail": "GitHub Actions orchestrates tests, rule checks, builds and server-rendering verification.",
-      "context": "Business applications"
-    },
-    {
-      "id": "enquiries",
-      "label": "Enquiry validation",
-      "detail": "Backend handlers validate customer input, apply rate limits and persist enquiries.",
-      "context": "Business applications"
-    },
-    {
-      "id": "rules",
-      "label": "Access-rule tests",
-      "detail": "Firestore emulator tests check anonymous-write denial, administrator access and privilege-escalation attempts.",
-      "context": "Business applications"
-    },
-    {
-      "id": "firestore",
-      "label": "Firestore",
-      "detail": "Document persistence and queries for products, enquiries, staff-related data and analytics.",
-      "context": "Business applications"
-    },
-    {
-      "id": "integrity",
-      "label": "Artifact integrity",
-      "detail": "Release tooling creates SHA-256 manifests and checks immutable-asset collisions before deployment.",
-      "context": "Business applications"
-    },
-    {
-      "id": "auth",
-      "label": "Staff sign-in",
-      "detail": "Firebase Authentication connects staff sign-in with protected administration workflows.",
-      "context": "Business applications"
-    },
-    {
-      "id": "analytics",
-      "label": "Analytics pipelines",
-      "detail": "Consent-aware event queues, batching and retries feed backend ingestion and scheduled reporting rollups.",
-      "context": "Business applications"
-    },
-    {
-      "id": "roles",
-      "label": "Staff permissions",
-      "detail": "Custom role claims and backend guards separate staff administration from content-management permissions.",
-      "context": "Business applications"
+      "id": "responsive",
+      "label": "Responsive UI",
+      "detail": "HTML and CSS layouts for public pages, administration tools and mobile interfaces.",
+      "context": "Web & business applications"
     },
     {
       "id": "ml",
-      "label": "ML & GPU systems",
-      "detail": "Recurrent model implementations, GPU execution and checks against reference computations.",
+      "label": "ML & research engineering",
+      "detail": "Neural architectures, learned memory, GPU execution and controlled experiments, alongside language and vision projects.",
       "context": "Area of work"
     },
     {
       "id": "python",
       "label": "Python",
-      "detail": "Model code, experiment runners, numerical checks and reproducibility utilities.",
-      "context": "Independent research",
-      "source": "https://github.com/xSolumx/AI_Culture_Mind/blob/main/SSM-Models/pure_spin_ssm_v1_2/model.py"
+      "detail": "Model implementations, data preparation, experiment runners and scientific-computing tools.",
+      "context": "ML projects & independent research"
     },
     {
       "id": "cuda",
       "label": "C++ & CUDA",
-      "detail": "Native PyTorch extensions implement forward and backward recurrent-state computations on the GPU.",
-      "context": "Independent research",
-      "source": "https://github.com/xSolumx/AI_Culture_Mind/blob/main/SSM-Models/pure_spin_ssm_v1_2/csrc/spin_scan_cuda.cu"
+      "detail": "Native PyTorch extensions and GPU kernels for recurrent-state computation and training gradients.",
+      "context": "ML projects & independent research"
     },
     {
       "id": "torch",
       "label": "PyTorch",
-      "detail": "Trainable recurrent models, tensor operations and comparisons between reference and custom execution paths.",
-      "context": "Independent research",
-      "source": "https://github.com/xSolumx/AI_Culture_Mind/blob/main/SSM-Models/pure_spin_ssm_v1_2/model.py"
+      "detail": "Trainable modules, optimisers, tensor operations and custom execution paths for neural models.",
+      "context": "ML projects & independent research"
     },
     {
       "id": "triton",
       "label": "Triton",
-      "detail": "Custom GPU kernels implement structured recurrent updates; source includes fused state-scan code.",
-      "context": "Independent research",
-      "source": "https://github.com/xSolumx/AI_Culture_Mind/blob/main/SSM-Models/pure_rotor_ssm/octonion_operator_triton.py"
+      "detail": "GPU kernels for structured scans and selected-state memory updates, including a separate fused inference path.",
+      "context": "ML projects & independent research"
     },
     {
-      "id": "models",
-      "label": "State-space models",
-      "detail": "Independent implementations of recurrent state-space models and structured memory, with separate experimental model families.",
-      "context": "Independent research",
-      "source": "https://github.com/xSolumx/AI_Culture_Mind/blob/main/SSM-Models/pure_spin_ssm_v1_2/model.py"
+      "id": "architectures",
+      "label": "Neural models",
+      "detail": "State-space and recurrent language models, structured memory and geometric layers implemented as experimental model families.",
+      "context": "ML projects & independent research"
     },
     {
-      "id": "autograd",
-      "label": "Custom autograd",
-      "detail": "PyTorch autograd functions connect native forward and backward kernels to model training.",
-      "context": "Independent research",
-      "source": "https://github.com/xSolumx/AI_Culture_Mind/blob/main/SSM-Models/pure_spin_ssm_v1_2/raw_cuda.py"
+      "id": "compilers",
+      "label": "ML compiler systems",
+      "detail": "Typed execution plans choose eager, scalar or tiled GPU paths using algebraic constraints, tensor shapes, precision and measured hardware profiles.",
+      "context": "ML projects & independent research",
+      "source": "https://github.com/xSolumx/AI_Culture_Mind/blob/main/SSM-Models/pure_spin8_ssm/compiler.py"
     },
     {
-      "id": "jax",
-      "label": "JAX & Flax",
-      "detail": "A separate differentiable backend implements geometric operations, recurrent scans and Flax model modules.",
-      "context": "Independent research",
-      "source": "https://github.com/xSolumx/AI_Culture_Mind/blob/main/SSM-Models/pure_rotor_ssm/jax_backend.py"
+      "id": "memory",
+      "label": "Memory & retrieval",
+      "detail": "Learned addressing, hard/soft routing, delta updates and hierarchical memory; retrieval quality is measured separately from kernel cost.",
+      "context": "ML projects & independent research",
+      "source": "https://github.com/xSolumx/AI_Culture_Mind/blob/main/research-programs/03-structured-memory-and-retrieval/README.md"
     },
     {
       "id": "scans",
       "label": "Parallel scans",
-      "detail": "Parallel recurrent-state computations are compared with sequential reference execution.",
-      "context": "Independent research",
-      "source": "https://github.com/xSolumx/AI_Culture_Mind/blob/main/SSM-Models/pure_spin_ssm_v1_2/chunk_parallel_scan.py"
+      "detail": "Associative transition composition and ordered parallel-prefix algorithms for recurrent state updates.",
+      "context": "ML projects & independent research"
     },
     {
-      "id": "validation",
-      "label": "Numerical validation",
-      "detail": "Reference-output and gradient comparisons, streaming equivalence and controlled execution checks.",
-      "context": "Independent research",
-      "source": "https://github.com/xSolumx/AI_Culture_Mind/blob/main/SSM-Models/pure_spin_ssm_v1_2/test_raw_cuda_training.py"
+      "id": "geometry",
+      "label": "Geometric ML",
+      "detail": "Equivariant operators, group representations and geometric algebra inform structured neural layers and controlled learning experiments.",
+      "context": "ML projects & independent research",
+      "source": "https://github.com/xSolumx/AI_Culture_Mind/blob/main/research-programs/02-equivariant-intertwiner-identification/README.md"
     },
     {
-      "id": "data",
-      "label": "Data & scientific computing",
-      "detail": "Exploratory analysis and image-classification coursework, alongside exact-arithmetic research checks.",
-      "context": "Area of work"
+      "id": "autograd",
+      "label": "Custom autograd",
+      "detail": "Native forward/backward kernels integrate with PyTorch training, with gradients compared against reference implementations.",
+      "context": "ML projects & independent research"
     },
     {
-      "id": "pandas",
-      "label": "Pandas & NumPy",
-      "detail": "Tabular analysis, grouped summaries and array operations in exploratory notebooks.",
-      "context": "Coursework",
-      "source": "https://github.com/xSolumx/Single-Prop-ML/blob/main/FindingSingleProp.ipynb"
+      "id": "jax",
+      "label": "JAX & Flax",
+      "detail": "Differentiable geometric operations, recurrent scans and Flax model modules in a separate backend.",
+      "context": "ML projects & independent research"
+    },
+    {
+      "id": "profiling",
+      "label": "GPU profiling",
+      "detail": "CPU/CUDA profiling, synchronised timing, warm-up, peak-memory measurements and comparisons of launch and compute costs.",
+      "context": "ML projects & independent research"
     },
     {
       "id": "tensorflow",
       "label": "TensorFlow & Keras",
-      "detail": "A convolutional animal-image classifier built and trained in a notebook.",
-      "context": "Coursework",
-      "source": "https://github.com/xSolumx/MLG-10-Animals/blob/main/MLG-10-Animals.ipynb"
+      "detail": "Convolutional image-classification models, tf.data batching/prefetching and validation diagnostics.",
+      "context": "ML projects & independent research"
     },
     {
-      "id": "preparation",
-      "label": "Data preparation",
-      "detail": "Column normalisation, missing-value handling and grouped data preparation in an aviation-analysis notebook. This is exploratory work.",
-      "context": "Coursework",
-      "source": "https://github.com/xSolumx/Single-Prop-ML/blob/main/FindingSingleProp.ipynb"
+      "id": "training",
+      "label": "Training pipelines",
+      "detail": "Deterministic dataset splits, sampled batches, optimiser steps, fixed evaluation batches, checkpoints and structured experiment outputs.",
+      "context": "ML projects & independent research"
     },
     {
-      "id": "classification",
-      "label": "Image classification",
-      "detail": "Convolution, pooling, normalisation and dropout layers classify animal images in a notebook project.",
-      "context": "Coursework",
-      "source": "https://github.com/xSolumx/MLG-10-Animals/blob/main/MLG-10-Animals.ipynb"
+      "id": "vision",
+      "label": "Computer vision",
+      "detail": "Image preprocessing, convolutional classification and evaluation, with broader plant detection/categorisation project work.",
+      "context": "ML projects & independent research"
     },
     {
-      "id": "plots",
-      "label": "Data visualisation",
-      "detail": "Matplotlib and Seaborn charts communicate grouped data, learning curves and confusion matrices.",
-      "context": "Coursework",
-      "source": "https://github.com/xSolumx/Single-Prop-ML/blob/main/FindingSingleProp.ipynb"
+      "id": "experiments",
+      "label": "Experiment design",
+      "detail": "Matched baselines, ablations, held-out cohorts and multiple seeds separate architectural effects from implementation and optimisation effects.",
+      "context": "ML projects & independent research",
+      "source": "https://github.com/xSolumx/AI_Culture_Mind/blob/main/research-programs/07-controlled-model-benchmarks/README.md"
     },
     {
-      "id": "pipeline",
-      "label": "tf.data pipelines",
-      "detail": "Image decoding, resizing, normalisation, batching and prefetching prepare training and validation inputs.",
-      "context": "Coursework",
-      "source": "https://github.com/xSolumx/MLG-10-Animals/blob/main/MLG-10-Animals.ipynb"
+      "id": "applied",
+      "label": "Language & vision apps",
+      "detail": "Project work includes an ebook translation programme and one-shot plant detection and categorisation models and an app.",
+      "context": "ML projects & independent research"
     },
     {
-      "id": "exact",
-      "label": "Exact arithmetic",
-      "detail": "Rational and polynomial calculations with independent FLINT cross-checks in the mathematical research.",
-      "context": "Independent research",
-      "source": "https://github.com/xSolumx/spin-triality-research/blob/main/src/spin8_publication_flint_crosscheck.py"
-    },
-    {
-      "id": "evaluation",
-      "label": "Model evaluation",
-      "detail": "Training and validation curves plus confusion-matrix evaluation for the animal classifier.",
-      "context": "Coursework",
-      "source": "https://github.com/xSolumx/MLG-10-Animals/blob/main/MLG-10-Animals.ipynb"
+      "id": "numerical",
+      "label": "Numerical methods",
+      "detail": "Linear algebra, reference-output and gradient checks, streaming equivalence, plus symbolic/exact arithmetic with SymPy and FLINT.",
+      "context": "ML projects & independent research"
     },
     {
       "id": "reproducibility",
       "label": "Reproducible research",
-      "detail": "Artifact manifests detect missing, altered and untracked result files, preserving the provenance of research outputs.",
-      "context": "Independent research",
-      "source": "https://github.com/xSolumx/spin-triality-research/blob/main/tools/verify_artifact_manifest.py"
+      "detail": "Pinned data identities, explicit configurations, validation scripts and artifact manifests keep experiments traceable.",
+      "context": "ML projects & independent research"
     },
     {
       "id": "applications",
-      "label": "Java & .NET applications",
-      "detail": "Event-driven Java projects, relational coursework and a Windows desktop prototype.",
+      "label": "Software & systems",
+      "detail": "Java and .NET applications, data work and the engineering practices used to build, debug and release software.",
       "context": "Area of work"
     },
     {
       "id": "java",
       "label": "Java",
-      "detail": "Plugin classes, commands and server-service integration using Java and the Paper/Bukkit ecosystem.",
-      "context": "Personal Java projects",
-      "source": "https://github.com/xSolumx/Rebel-Items/blob/main/src/main/java/com/mcrebels/rebelitems/rebelitems/RebelItems.java"
+      "detail": "Event-driven server plugins, commands, custom interfaces and Paper/Bukkit integration.",
+      "context": "Application work & engineering practice"
     },
     {
       "id": "csharp",
       "label": "C# & .NET",
-      "detail": "Windows application development through WinForms coursework and a WPF utility prototype.",
-      "context": "Coursework",
-      "source": "https://github.com/xSolumx/Prg-2782-Project-1/blob/master/DataHandler.cs"
+      "detail": "Windows applications and relational data access through WinForms coursework and a WPF utility prototype.",
+      "context": "Application work & engineering practice"
     },
     {
-      "id": "plugins",
-      "label": "Event-driven plugins",
-      "detail": "Server events drive custom item behaviours and inventory interactions. Some item variants remain unfinished.",
-      "context": "Personal Java projects",
-      "source": "https://github.com/xSolumx/Rebel-Items/blob/main/src/main/java/com/mcrebels/rebelitems/rebelitems/RebelItems.java"
-    },
-    {
-      "id": "winforms",
-      "label": "WinForms & ADO.NET",
-      "detail": "Student and module management forms use data tables, adapters and parameterised database calls.",
-      "context": "Coursework",
-      "source": "https://github.com/xSolumx/Prg-2782-Project-1/blob/master/DataHandler.cs"
-    },
-    {
-      "id": "resources",
-      "label": "Resource-pack parsing",
-      "detail": "JSON model files are parsed into custom items and categorised inventory interfaces.",
-      "context": "Personal Java projects",
-      "source": "https://github.com/xSolumx/AdditionalBlocks/blob/master/src/main/java/com/mcrebels/additionalblocks/additionalblocks/util/JSONParser.java"
+      "id": "events",
+      "label": "Event-driven code",
+      "detail": "Plugin events, persistent item metadata, resource-pack JSON parsing and inventory interactions.",
+      "context": "Application work & engineering practice"
     },
     {
       "id": "sql",
-      "label": "SQL Server",
-      "detail": "Parameterised SQL Server stored-procedure calls provide CRUD operations in C# coursework.",
-      "context": "Coursework",
-      "source": "https://github.com/xSolumx/Prg-2782-Project-1/blob/master/DataHandler.cs"
-    },
-    {
-      "id": "metadata",
-      "label": "Persistent metadata",
-      "detail": "Paper/Bukkit persistent-data containers attach custom metadata to items.",
-      "context": "Personal Java projects",
-      "source": "https://github.com/xSolumx/AdditionalBlocks/blob/master/src/main/java/com/mcrebels/additionalblocks/additionalblocks/util/PersistentDataSpace.java"
-    },
-    {
-      "id": "wpf",
-      "label": "WPF & processes",
-      "detail": "A Windows utility prototype launches external processes asynchronously and updates UI output through the dispatcher.",
-      "context": "Prototype",
-      "source": "https://github.com/xSolumx/DISM_Graphical_App/blob/master/MainWindow.xaml.cs"
+      "label": "SQL & data access",
+      "detail": "SQL Server stored-procedure calls, parameterised CRUD, ADO.NET adapters and data tables in C# coursework.",
+      "context": "Application work & engineering practice"
     },
     {
       "id": "integration",
       "label": "API integration",
-      "detail": "Paper/Bukkit and Vault server-service integration, with ADO.NET database integration in separate C# coursework.",
-      "context": "Personal projects & coursework",
-      "source": "https://github.com/xSolumx/Rebel-Items/blob/main/src/main/java/com/mcrebels/rebelitems/rebelitems/RebelItems.java"
+      "detail": "Application services, Paper/Bukkit and Vault integration, plus Open-Meteo-based weather and forecasting work in nursery tooling.",
+      "context": "Application work & engineering practice"
+    },
+    {
+      "id": "desktop",
+      "label": "Desktop apps",
+      "detail": "WinForms student/module management and WPF process execution with asynchronous output and UI dispatch.",
+      "context": "Application work & engineering practice"
+    },
+    {
+      "id": "linux",
+      "label": "Linux",
+      "detail": "Server administration, command-line workflows and Linux/WSL development environments.",
+      "context": "Application work & engineering practice"
+    },
+    {
+      "id": "data",
+      "label": "Data analysis",
+      "detail": "Pandas/NumPy preparation and exploration, with Matplotlib/Seaborn visualisation and notebook-based analysis.",
+      "context": "Application work & engineering practice"
+    },
+    {
+      "id": "git",
+      "label": "Git & CI/CD",
+      "detail": "Version control, automated release gates, dependency/build checks, SHA-256 manifests and immutable-asset verification.",
+      "context": "Application work & engineering practice"
+    },
+    {
+      "id": "testing",
+      "label": "Automated testing",
+      "detail": "Unit, integration, access-rule and numerical tests check behaviour and failure cases across application and research code.",
+      "context": "Application work & engineering practice"
+    },
+    {
+      "id": "debugging",
+      "label": "Performance debugging",
+      "detail": "Investigating application behaviour, process output, server issues and computational bottlenecks.",
+      "context": "Application work & engineering practice"
     }
   ],
   "edges": [
@@ -342,8 +319,18 @@
     ],
     [
       "web",
-      "html",
+      "node",
       "tool"
+    ],
+    [
+      "react",
+      "typescript",
+      "application"
+    ],
+    [
+      "react",
+      "cms",
+      "application"
     ],
     [
       "react",
@@ -351,88 +338,68 @@
       "application"
     ],
     [
-      "react",
+      "typescript",
+      "content",
+      "application"
+    ],
+    [
+      "cms",
+      "editorial",
+      "application"
+    ],
+    [
+      "cms",
+      "richtext",
+      "application"
+    ],
+    [
+      "cms",
+      "media",
+      "application"
+    ],
+    [
+      "cms",
       "spreadsheets",
       "application"
     ],
     [
       "react",
-      "catalogue",
-      "application"
-    ],
-    [
-      "rendering",
-      "prefetch",
-      "application"
-    ],
-    [
-      "html",
       "responsive",
       "application"
     ],
     [
-      "html",
-      "accessibility",
+      "node",
+      "firebase",
       "application"
     ],
     [
-      "html",
-      "media",
+      "node",
+      "validation",
       "application"
     ],
     [
-      "engineering",
-      "backend",
-      "area"
-    ],
-    [
-      "backend",
-      "functions",
-      "tool"
-    ],
-    [
-      "backend",
-      "releases",
-      "tool"
-    ],
-    [
-      "functions",
-      "enquiries",
-      "application"
-    ],
-    [
-      "functions",
-      "firestore",
-      "application"
-    ],
-    [
-      "functions",
-      "auth",
-      "application"
-    ],
-    [
-      "functions",
-      "analytics",
-      "application"
-    ],
-    [
-      "releases",
-      "rules",
-      "application"
-    ],
-    [
-      "releases",
-      "integrity",
-      "application"
-    ],
-    [
-      "auth",
+      "firebase",
       "roles",
       "application"
     ],
     [
-      "firestore",
+      "firebase",
+      "business",
+      "application"
+    ],
+    [
+      "firebase",
       "analytics",
+      "application"
+    ],
+    [
+      "react",
+      "accessibility",
+      "application"
+    ],
+    [
+      "content",
+      "validation",
       "practice"
     ],
     [
@@ -461,8 +428,33 @@
       "application"
     ],
     [
+      "python",
+      "tensorflow",
+      "application"
+    ],
+    [
+      "python",
+      "applied",
+      "application"
+    ],
+    [
       "torch",
-      "models",
+      "architectures",
+      "application"
+    ],
+    [
+      "torch",
+      "memory",
+      "application"
+    ],
+    [
+      "torch",
+      "geometry",
+      "application"
+    ],
+    [
+      "tensorflow",
+      "vision",
       "application"
     ],
     [
@@ -472,72 +464,47 @@
     ],
     [
       "cuda",
+      "compilers",
+      "application"
+    ],
+    [
+      "cuda",
       "autograd",
       "application"
     ],
     [
       "cuda",
+      "profiling",
+      "application"
+    ],
+    [
+      "compilers",
       "scans",
       "application"
     ],
     [
       "torch",
-      "validation",
+      "training",
+      "application"
+    ],
+    [
+      "torch",
+      "experiments",
+      "application"
+    ],
+    [
+      "python",
+      "numerical",
+      "application"
+    ],
+    [
+      "experiments",
+      "reproducibility",
       "practice"
     ],
     [
       "cuda",
-      "validation",
-      "practice"
-    ],
-    [
-      "engineering",
-      "data",
-      "area"
-    ],
-    [
-      "data",
-      "pandas",
-      "tool"
-    ],
-    [
-      "data",
-      "tensorflow",
-      "tool"
-    ],
-    [
-      "pandas",
-      "preparation",
-      "application"
-    ],
-    [
-      "pandas",
-      "plots",
-      "application"
-    ],
-    [
-      "tensorflow",
-      "classification",
-      "application"
-    ],
-    [
-      "tensorflow",
-      "pipeline",
-      "application"
-    ],
-    [
-      "tensorflow",
-      "evaluation",
-      "application"
-    ],
-    [
-      "data",
-      "exact",
-      "application"
-    ],
-    [
-      "exact",
-      "reproducibility",
+      "numerical",
       "practice"
     ],
     [
@@ -557,165 +524,152 @@
     ],
     [
       "java",
-      "plugins",
+      "events",
       "application"
     ],
     [
       "java",
-      "resources",
-      "application"
-    ],
-    [
-      "java",
-      "metadata",
+      "integration",
       "application"
     ],
     [
       "csharp",
-      "winforms",
-      "application"
-    ],
-    [
-      "csharp",
-      "wpf",
-      "application"
-    ],
-    [
-      "winforms",
       "sql",
       "application"
     ],
     [
+      "csharp",
+      "desktop",
+      "application"
+    ],
+    [
+      "applications",
+      "linux",
+      "application"
+    ],
+    [
+      "applications",
+      "data",
+      "application"
+    ],
+    [
+      "applications",
+      "git",
+      "application"
+    ],
+    [
+      "git",
+      "testing",
+      "practice"
+    ],
+    [
       "java",
-      "integration",
+      "debugging",
       "practice"
     ],
     [
       "csharp",
-      "integration",
+      "debugging",
       "practice"
     ],
     [
-      "react",
-      "functions",
+      "validation",
+      "testing",
       "bridge",
-      "Interfaces call backend handlers"
-    ],
-    [
-      "catalogue",
-      "firestore",
-      "bridge",
-      "Catalogue data is stored in Firestore"
-    ],
-    [
-      "spreadsheets",
-      "preparation",
-      "bridge",
-      "Both involve preparing structured records"
-    ],
-    [
-      "media",
-      "pipeline",
-      "bridge",
-      "Both prepare image data for downstream use"
+      "Input and write-boundary checks are exercised by automated tests"
     ],
     [
       "analytics",
-      "plots",
+      "data",
       "bridge",
-      "Reporting connects collected events to visual summaries"
+      "Reporting and analysis turn recorded data into useful summaries"
     ],
     [
-      "integrity",
+      "node",
+      "integration",
+      "bridge",
+      "Backend handlers connect application services"
+    ],
+    [
+      "spreadsheets",
+      "data",
+      "bridge",
+      "Both transform and validate structured records"
+    ],
+    [
+      "profiling",
+      "debugging",
+      "bridge",
+      "Profiling guides investigation of computational bottlenecks"
+    ],
+    [
+      "experiments",
+      "testing",
+      "bridge",
+      "Experiment contracts are checked with executable validation"
+    ],
+    [
       "reproducibility",
+      "git",
       "bridge",
-      "Both verify artifacts with content hashes"
-    ],
-    [
-      "validation",
-      "evaluation",
-      "bridge",
-      "Both compare computed results against evaluation criteria"
-    ],
-    [
-      "validation",
-      "exact",
-      "bridge",
-      "Numerical checks complement exact arithmetic"
+      "Versioned code and verified artifacts preserve experiment provenance"
     ],
     [
       "python",
-      "pandas",
+      "data",
       "bridge",
-      "Python is used for tabular and array analysis"
-    ],
-    [
-      "torch",
-      "tensorflow",
-      "bridge",
-      "Separate frameworks used in model projects"
+      "Python supports tabular analysis and scientific computation"
     ]
   ],
   "branches": [
     {
       "id": "web",
-      "label": "Web interfaces",
+      "label": "Full-stack & CMS",
       "href": "#work",
-      "link": "View application work",
+      "link": "Explore business applications",
       "rows": [
         [
           "react",
-          "html"
+          "node"
         ],
         [
-          "rendering",
-          "responsive"
+          "typescript",
+          "firebase"
         ],
         [
-          "prefetch",
-          "accessibility"
+          "cms",
+          "roles"
         ],
         [
-          "spreadsheets",
-          "media"
+          "content",
+          "validation"
         ],
         [
-          "catalogue"
-        ]
-      ]
-    },
-    {
-      "id": "backend",
-      "label": "Backend & delivery",
-      "href": "#work",
-      "link": "View business systems",
-      "rows": [
-        [
-          "functions",
-          "releases"
+          "editorial",
+          "business"
         ],
         [
-          "enquiries",
-          "rules"
-        ],
-        [
-          "firestore",
-          "integrity"
-        ],
-        [
-          "auth",
+          "richtext",
           "analytics"
         ],
         [
-          "roles"
+          "media",
+          "rendering"
+        ],
+        [
+          "spreadsheets",
+          "accessibility"
+        ],
+        [
+          "responsive"
         ]
       ]
     },
     {
       "id": "ml",
-      "label": "ML & GPU systems",
+      "label": "ML & research engineering",
       "href": "#research",
-      "link": "View research work",
+      "link": "Explore ML & research",
       "rows": [
         [
           "python",
@@ -726,39 +680,32 @@
           "triton"
         ],
         [
-          "models",
+          "architectures",
+          "compilers"
+        ],
+        [
+          "memory",
+          "scans"
+        ],
+        [
+          "geometry",
           "autograd"
         ],
         [
           "jax",
-          "scans"
+          "profiling"
         ],
         [
-          "validation"
-        ]
-      ]
-    },
-    {
-      "id": "data",
-      "label": "Data & scientific computing",
-      "href": "#more-projects",
-      "link": "View supporting projects",
-      "rows": [
-        [
-          "pandas",
-          "tensorflow"
+          "tensorflow",
+          "training"
         ],
         [
-          "preparation",
-          "classification"
+          "vision",
+          "experiments"
         ],
         [
-          "plots",
-          "pipeline"
-        ],
-        [
-          "exact",
-          "evaluation"
+          "applied",
+          "numerical"
         ],
         [
           "reproducibility"
@@ -767,28 +714,32 @@
     },
     {
       "id": "applications",
-      "label": "Java & .NET applications",
+      "label": "Software & systems",
       "href": "#more-projects",
-      "link": "View application projects",
+      "link": "Explore supporting work",
       "rows": [
         [
           "java",
           "csharp"
         ],
         [
-          "plugins",
-          "winforms"
-        ],
-        [
-          "resources",
+          "events",
           "sql"
         ],
         [
-          "metadata",
-          "wpf"
+          "integration",
+          "desktop"
         ],
         [
-          "integration"
+          "linux",
+          "data"
+        ],
+        [
+          "git",
+          "testing"
+        ],
+        [
+          "debugging"
         ]
       ]
     }

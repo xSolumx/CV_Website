@@ -96,7 +96,7 @@ summary{cursor:pointer;color:var(--ink);font-weight:600;min-height:44px}
 .more-work{margin-top:20px}
 .more-work>summary{padding:16px 0;font-size:1rem}
 .more-work>summary span{margin-left:18px;font-weight:400;font-size:.875rem;color:var(--muted)}
-.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;padding-top:20px}
+.mini-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;padding-top:20px}
 .mini-grid article{padding:24px;background:var(--soft);border-radius:4px}
 .mini-grid h3{font-size:1.65rem}
 .mini-grid p{color:var(--muted);font-size:1rem}
