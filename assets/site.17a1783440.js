@@ -24,7 +24,7 @@
     status.textContent = ''; 
     retry.hidden = true;
     try {
-      pending ||= import('./skill-map.7d88cdd1b5.js');
+      pending ||= import('./skill-map.8b172648d9.js');
       const graph = await pending;
       if (!atlas.open || mounted) return;
       graph.mount(atlas);

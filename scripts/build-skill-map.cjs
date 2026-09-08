@@ -7,6 +7,7 @@ const data = JSON.parse(fs.readFileSync(path.join(root, 'data/skills.json'), 'ut
 const output = data;
 const ids = new Set(['engineering', ...data.nodes.map(n=>n.id)]);
 if (ids.size !== 51 || data.nodes.length !== 50) throw Error('Expected exactly 51 unique nodes including the hub');
+if(data.branches.length !== 3) throw Error('Expected three areas');
 const knownEdges = new Set();
 for (const [a,b,kind,detail] of data.edges) {
   if (!ids.has(a) || !ids.has(b) || a === b) throw Error('Invalid connection');
@@ -29,7 +30,7 @@ const escape=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':
 const lookup=new Map(data.nodes.map(n=>[n.id,n]));
 const button=(id,extra='')=>`<button class="skill-node ${extra}" id="skill-${id}" data-node="${id}" type="button" aria-pressed="false" aria-controls="skill-note-${areas.get(id)}" disabled>${escape(lookup.get(id).label)}</button>`;
 const branchHtml=data.branches.map((b,i)=>`<section class="skill-branch" data-area="${b.id}" aria-label="${escape(b.label)}"><span class="skill-area-number" aria-hidden="true">0${i+1}</span>${button(b.id,'branch-title')}${b.rows.map((row,j)=>`<div class="skill-row ${j===0?'tools':''} ${row.length===1?'single':''}">${row.map(id=>button(id)).join('')}</div>`).join('')}<div class="skill-note" id="skill-note-${b.id}" hidden><div class="skill-note-header"><strong></strong><button class="skill-dismiss" type="button" aria-label="Close skill details">×</button></div><span class="skill-context"></span><p class="skill-description"></p><div class="skill-related" aria-label="Connected skills"></div><a class="skill-source" hidden target="_blank" rel="noreferrer">View source ↗</a></div><a class="skill-work-link" href="${b.href}">${escape(b.link)} ↗</a></section>`).join('');
-const boardHtml=`<div class="skill-board"><svg class="skill-lines" aria-hidden="true"></svg><div class="skill-origin"><span>Software engineering</span><small>Five connected areas of work</small></div><div class="skill-branches">${branchHtml}</div></div><p class="skill-legend"><span class="legend-line" aria-hidden="true"></span>Tools & applications <span class="legend-line dotted" aria-hidden="true"></span>Shared practices</p><p class="skill-announcement sr-only" role="status" aria-live="polite"></p>`;
+const boardHtml=`<div class="skill-board"><svg class="skill-lines" aria-hidden="true"></svg><div class="skill-origin"><span>Software engineering</span><small>Three connected areas of work</small></div><div class="skill-branches">${branchHtml}</div></div><p class="skill-legend"><span class="legend-line" aria-hidden="true"></span>Tools & applications <span class="legend-line dotted" aria-hidden="true"></span>Shared practices</p><p class="skill-announcement sr-only" role="status" aria-live="polite"></p>`;
 // Fingerprint the complete lazy module as one request, including its data.
 const assets = path.join(root,'assets');
 for(const file of fs.readdirSync(assets)) {
