@@ -105,7 +105,7 @@
     },
     {
       "id": "auth",
-      "label": "Authentication",
+      "label": "Staff sign-in",
       "detail": "Firebase Authentication connects staff sign-in with protected administration workflows.",
       "context": "Business applications"
     },

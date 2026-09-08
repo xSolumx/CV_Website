@@ -46,7 +46,7 @@ All 13 accessible repository trees were rechecked and were non-truncated. Twelve
 | Access-rule tests | Business applications | Reviewed business-application implementation; see the work section for public application links. |
 | Firestore | Business applications | Reviewed business-application implementation; see the work section for public application links. |
 | Artifact integrity | Business applications | Reviewed business-application implementation; see the work section for public application links. |
-| Authentication | Business applications | Reviewed business-application implementation; see the work section for public application links. |
+| Staff sign-in | Business applications | Reviewed business-application implementation; see the work section for public application links. |
 | Analytics pipelines | Business applications | Reviewed business-application implementation; see the work section for public application links. |
 | Staff permissions | Business applications | Reviewed business-application implementation; see the work section for public application links. |
 | ML & GPU systems | Area of work | Recurrent model implementations, GPU execution and checks against reference computations. |

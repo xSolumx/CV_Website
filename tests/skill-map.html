@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Skill map responsive check</title>
-<style>body{font:15px system-ui;margin:20px;background:#e5e8e0;color:#153b2f}header{position:sticky;top:0;z-index:5;background:#e5e8e0;padding-block:10px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:16px}button,select{font:inherit;padding:10px}iframe{display:block;border:1px solid #657b68;background:#f4f3ec;height:844px;max-width:none}pre{white-space:pre-wrap}#frame-wrap{overflow:auto;max-width:100%}</style></head>
+<style>body{font:15px system-ui;margin:20px;background:#e5e8e0;color:#153b2f}header{position:sticky;top:0;z-index:5;background:#e5e8e0;padding-block:10px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:16px}button,select{font:inherit;padding:10px}iframe{display:block;border:1px solid #657b68;background:#f4f3ec;height:844px;max-width:none}pre{white-space:pre-wrap;max-height:220px;overflow:auto}#frame-wrap{overflow:auto;max-width:100%}</style></head>
 <body><header><label>Viewport <select id="size"><option value="390">390 px — phone</option><option value="320">320 px — small phone</option><option value="768">768 px — tablet</option><option value="1280">1280 px — desktop</option></select></label><button id="read" type="button">Read render counters</button><button id="reload" type="button">Reload frame</button><button id="verify" type="button">Verify all graph interactions</button><label><input id="nojs" type="checkbox"> No JavaScript</label></header>
 <p>Manual development fixture. Counters describe scheduled animation callbacks, not device frame rate. Native touch and low-end hardware still require device testing.</p><pre id="report" role="status">Loading…</pre><div id="frame-wrap"><iframe id="frame" title="CV website responsive preview" src="../index.html#technical" style="width:390px"></iframe></div>
 <script>
@@ -25,6 +25,8 @@ document.querySelector('#verify').addEventListener('click',async()=>{
   const delay=()=>new Promise(resolve=>setTimeout(resolve,100));
   const check=(ok,message)=>{if(!ok)failures.push(message);};
   atlas.open=true;atlas.scrollIntoView();await delay();
+  for(let i=0;i<100 && !atlas.classList.contains('skill-ready');i++)await delay();
+  if(!atlas.classList.contains('skill-ready')){report.textContent='Graph did not activate within 10 seconds.';return;}
   const nodes=[...d.querySelectorAll('[data-node]')];
   check(nodes.length===50 && d.querySelectorAll('.skill-origin').length===1,'Expected 51 nodes');
   check(d.querySelectorAll('.skill-lines path').length===63,'Expected 63 edges');
@@ -54,7 +56,7 @@ document.querySelector('#verify').addEventListener('click',async()=>{
   frame.style.width=document.querySelector('#size').value+'px';await delay();
   const before=stats.executed;await delay();check(stats.executed===before,'Animation continues while idle');
   atlas.open=false;await delay();const closed=stats.executed;await delay();check(stats.executed===closed,'Animation continues while collapsed');
-  atlas.open=true;await delay();
+  atlas.open=true;atlas.scrollIntoView();await delay();await delay();
   check(w.performance.getEntriesByType('resource').filter(e=>/skill-map.*\.js/.test(e.name)).length===1,'Graph module loaded more than once');
   report.textContent=JSON.stringify({passed:failures.length===0,failures,selections,jumps,widths:[320,390,768,1280],nodes:51,edges:63,pending:stats.pending.size},null,2);
 });
