@@ -1,0 +1,360 @@
+[
+  {
+    "key": "General",
+    "role": "Software Engineer",
+    "summary": "Software engineer building business applications, mobile data workflows and document/audio tools. Independent research in recurrent models, GPU execution and numerical validation.",
+    "section": "Selected engineering work",
+    "projects": [
+      {
+        "title": "Business applications & custom CMSs",
+        "links": [
+          [
+            "Project overview",
+            "https://xsolumx.github.io/CV_Website/#equipment"
+          ]
+        ],
+        "bullets": [
+          "Built React/TypeScript catalogues and administration tools for products, publishing, media and staff permissions.",
+          "Implemented Firebase services, spreadsheet workflows, server rendering and automated access-rule and release checks."
+        ]
+      },
+      {
+        "title": "Agronomy field records (in development)",
+        "links": [
+          [
+            "Project overview",
+            "https://xsolumx.github.io/CV_Website/#nursery-field"
+          ]
+        ],
+        "bullets": [
+          "Developed React Native/Expo records with SQLite persistence, retry-safe uploads and retained correction history.",
+          "Integrated validated weather forecasts with caching, freshness indicators and explicit missing-data states."
+        ]
+      },
+      {
+        "title": "Independent GPU & ML systems research",
+        "links": [
+          [
+            "Code & tests",
+            "https://github.com/xSolumx/AI_Culture_Mind/tree/main/SSM-Models/pure_spin_ssm_v1_2"
+          ]
+        ],
+        "bullets": [
+          "Implemented recurrent state-space models and parallel scans, integrating custom C++/CUDA and Triton kernels with PyTorch autograd.",
+          "Built tests for outputs, gradients and streaming equivalence against reference implementations, with reproducible benchmarks and artifact-integrity checks."
+        ]
+      },
+      {
+        "title": "Audio-enhanced EPUB tooling (in development)",
+        "links": [
+          [
+            "Project overview",
+            "https://xsolumx.github.io/CV_Website/#audio-epub"
+          ]
+        ],
+        "bullets": [
+          "Developed Python PDF/OCR conversion, recorded-speech alignment and generated-narration components for EPUB media overlays."
+        ]
+      }
+    ],
+    "skills": [
+      [
+        "Applications",
+        "TypeScript, React, React Native/Expo, Node.js, Firebase"
+      ],
+      [
+        "Data & delivery",
+        "SQLite, PostgreSQL, SQL, Git, Linux, automated testing, CI/CD"
+      ],
+      [
+        "ML & programming",
+        "Python, PyTorch, JAX, C++/CUDA, Triton; Java and C#"
+      ]
+    ]
+  },
+  {
+    "key": "Full_Stack",
+    "role": "Software Engineer | Full-Stack Development",
+    "summary": "Software engineer building web and mobile applications with React, TypeScript and backend services. Work includes custom CMSs, offline records, interactive analytics and multilingual interfaces.",
+    "section": "Selected application development",
+    "projects": [
+      {
+        "title": "Business applications & custom CMSs",
+        "links": [
+          [
+            "Project overview",
+            "https://xsolumx.github.io/CV_Website/#equipment"
+          ]
+        ],
+        "bullets": [
+          "Built React/TypeScript catalogues and administration tools for products, publishing, media and staff permissions.",
+          "Implemented Firebase services, spreadsheet workflows, server rendering and automated access-rule and release checks."
+        ]
+      },
+      {
+        "title": "Agronomy field records (in development)",
+        "links": [
+          [
+            "Project overview",
+            "https://xsolumx.github.io/CV_Website/#nursery-field"
+          ]
+        ],
+        "bullets": [
+          "Developed React Native/Expo records with SQLite persistence, retry-safe uploads and retained correction history.",
+          "Integrated validated weather forecasts with caching, freshness indicators and explicit missing-data states."
+        ]
+      },
+      {
+        "title": "Strategy-game analytics dashboard",
+        "links": [
+          [
+            "Project overview",
+            "https://xsolumx.github.io/CV_Website/#analytics-dashboard"
+          ]
+        ],
+        "bullets": [
+          "Built React/TypeScript comparisons and D3 charts with batched API requests, Web Worker computation and coordinated caching."
+        ]
+      },
+      {
+        "title": "IntegerSpark multilingual calculator",
+        "links": [
+          [
+            "Project overview",
+            "https://xsolumx.github.io/CV_Website/#integerspark"
+          ]
+        ],
+        "bullets": [
+          "Implemented decimal arithmetic, locale-aware number handling and static pages for 12 languages, with asset-size checks."
+        ]
+      }
+    ],
+    "skills": [
+      [
+        "Interfaces",
+        "React, Next.js, React Native/Expo, TypeScript, D3, localisation"
+      ],
+      [
+        "Backend & data",
+        "Node.js, Fastify, Firebase, PostgreSQL/Drizzle, SQLite"
+      ],
+      [
+        "Engineering",
+        "API batching, offline sync, automated testing, GitHub Actions, Linux"
+      ]
+    ]
+  },
+  {
+    "key": "ML_Research",
+    "role": "Software Engineer | Machine Learning Systems",
+    "summary": "Software engineer combining independent neural-model and GPU research with applied document and speech processing. Work spans custom execution paths, numerical validation and audio-enhanced EPUB tooling.",
+    "section": "Research & machine learning projects",
+    "projects": [
+      {
+        "title": "Independent ML systems & numerical research",
+        "links": [
+          [
+            "Code",
+            "https://github.com/xSolumx/AI_Culture_Mind"
+          ]
+        ],
+        "bullets": [
+          "Implemented recurrent models and learned-memory experiments in PyTorch and JAX/Flax, with parallel scans and custom CUDA/Triton execution.",
+          "Developed autograd paths and reference checks for outputs, gradients and streaming equivalence.",
+          "Built controlled benchmarks and artifact-integrity checks; used SymPy/FLINT for exact-arithmetic validation."
+        ]
+      },
+      {
+        "title": "Audio-enhanced EPUB tooling (in development)",
+        "links": [
+          [
+            "Project overview",
+            "https://xsolumx.github.io/CV_Website/#audio-epub"
+          ]
+        ],
+        "bullets": [
+          "Developed PDF extraction, OCR and text-fragment components for an audio-EPUB authoring pipeline.",
+          "Integrated Whisper-family alignment and Edge TTS paths with narration timing and EPUB media-overlay packaging; integration validation is ongoing."
+        ]
+      },
+      {
+        "title": "Agronomy data application (in development)",
+        "links": [
+          [
+            "Project overview",
+            "https://xsolumx.github.io/CV_Website/#nursery-field"
+          ]
+        ],
+        "bullets": [
+          "Implemented forecast validation, cache freshness and rainfall-coverage handling that distinguishes missing observations from zero."
+        ]
+      }
+    ],
+    "skills": [
+      [
+        "Models & inference",
+        "Python, PyTorch, JAX/Flax, TensorFlow/Keras, Whisper integration"
+      ],
+      [
+        "GPU & numerical",
+        "C++, CUDA, Triton, NumPy, SymPy, FLINT"
+      ],
+      [
+        "Applied engineering",
+        "OCR, audio-text alignment, reference tests, Git, Linux"
+      ]
+    ]
+  },
+  {
+    "key": "CSharp_DotNet",
+    "role": "Software Developer | C# & .NET",
+    "summary": "Software developer with C# WinForms, WPF and SQL Server projects, plus web and mobile application development. Work spans relational data access, asynchronous interfaces, offline persistence and backend validation.",
+    "section": "Selected application development",
+    "projects": [
+      {
+        "title": "Student & module management (coursework)",
+        "links": [
+          [
+            "Code",
+            "https://github.com/xSolumx/Prg-2782-Project-1/blob/master/DataHandler.cs"
+          ]
+        ],
+        "bullets": [
+          "Built a C# WinForms application for creating, searching, updating and deleting student and module records in SQL Server.",
+          "Implemented ADO.NET data access using DataTable, SqlDataAdapter and parameterised stored-procedure calls for form-driven CRUD workflows."
+        ]
+      },
+      {
+        "title": "Windows maintenance interface (prototype)",
+        "links": [
+          [
+            "Code",
+            "https://github.com/xSolumx/DISM_Graphical_App/blob/master/MainWindow.xaml.cs"
+          ]
+        ],
+        "bullets": [
+          "Prototyped a C# WPF interface for running DISM and SFC, capturing external-process output and updating controls through the UI dispatcher."
+        ]
+      },
+      {
+        "title": "Agronomy field records (in development)",
+        "links": [
+          [
+            "Project overview",
+            "https://xsolumx.github.io/CV_Website/#nursery-field"
+          ]
+        ],
+        "bullets": [
+          "Developed React Native/Expo records with SQLite persistence, retry-safe uploads and retained correction history.",
+          "Integrated validated weather forecasts with caching, freshness indicators and explicit missing-data states."
+        ]
+      },
+      {
+        "title": "Business administration applications",
+        "links": [
+          [
+            "Project overview",
+            "https://xsolumx.github.io/CV_Website/#equipment"
+          ]
+        ],
+        "bullets": [
+          "Built React/TypeScript catalogues and administration tools for products, publishing, media and staff permissions."
+        ]
+      }
+    ],
+    "skills": [
+      [
+        "C# & desktop",
+        ".NET Framework, WinForms, WPF, async/await, event handling"
+      ],
+      [
+        "Data access",
+        "SQL Server, ADO.NET, DataTable, stored-procedure calls"
+      ],
+      [
+        "Broader applications",
+        "TypeScript, React, React Native/Expo, Firebase, PostgreSQL, SQLite"
+      ],
+      [
+        "Engineering",
+        "Git, GitHub Actions, automated testing, Linux"
+      ]
+    ]
+  },
+  {
+    "key": "Java",
+    "role": "Software Developer | Java Applications",
+    "summary": "Software developer with Java server-plugin experience in event-driven APIs, persistent metadata and custom interfaces. Broader work includes mobile record synchronisation, backend services and browser-worker analytics.",
+    "section": "Selected Java & application projects",
+    "projects": [
+      {
+        "title": "Resource-pack tools & custom blocks",
+        "links": [
+          [
+            "Source code",
+            "https://github.com/xSolumx/AdditionalBlocks"
+          ]
+        ],
+        "bullets": [
+          "Built a Paper/Bukkit plugin that reads resource-pack JSON and turns model metadata into custom items and categorised inventory menus.",
+          "Implemented persistent item tags and placement/break-event handling; added ZIP extraction checks against paths outside the destination."
+        ]
+      },
+      {
+        "title": "Custom item & event plugins",
+        "links": [
+          [
+            "Source code",
+            "https://github.com/xSolumx/Rebel-Items"
+          ]
+        ],
+        "bullets": [
+          "Developed Java item behaviours using server event listeners, command handlers and persistent metadata."
+        ]
+      },
+      {
+        "title": "Agronomy field records (in development)",
+        "links": [
+          [
+            "Project overview",
+            "https://xsolumx.github.io/CV_Website/#nursery-field"
+          ]
+        ],
+        "bullets": [
+          "Developed React Native/Expo records with SQLite persistence, retry-safe uploads and retained correction history.",
+          "Integrated validated weather forecasts with caching, freshness indicators and explicit missing-data states."
+        ]
+      },
+      {
+        "title": "Strategy-game analytics dashboard",
+        "links": [
+          [
+            "Project overview",
+            "https://xsolumx.github.io/CV_Website/#analytics-dashboard"
+          ]
+        ],
+        "bullets": [
+          "Built React/TypeScript comparisons and D3 charts with batched API requests, Web Worker computation and coordinated caching."
+        ]
+      }
+    ],
+    "skills": [
+      [
+        "Core",
+        "Java, object-oriented programming, Maven"
+      ],
+      [
+        "Plugin development",
+        "Paper/Bukkit APIs, Vault, JSON parsing, persistent metadata"
+      ],
+      [
+        "Broader applications",
+        "TypeScript, React, Node.js, Firebase, PostgreSQL, SQLite"
+      ],
+      [
+        "Engineering",
+        "Git, Linux, automated testing, GitHub Actions"
+      ]
+    ]
+  }
+]
