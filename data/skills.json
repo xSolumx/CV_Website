@@ -1,10 +1,10 @@
 {
-  "description": "Three areas of work: 47 capabilities, three area nodes and one engineering hub. Public source links are optional. Project descriptions in this revision use accessible implementation and retained CV context.",
+  "description": "Three connected areas: 47 capabilities, three area nodes and one engineering hub. Evidence includes reviewed public and private implementation; private projects link through portfolio descriptions.",
   "nodes": [
     {
       "id": "web",
-      "label": "Full-stack & CMS",
-      "detail": "Custom content-management systems, business workflows and the interfaces and services that connect them.",
+      "label": "Web & mobile systems",
+      "detail": "Business applications, custom CMSs and mobile tools that connect interfaces, records and backend services.",
       "context": "Area of work"
     },
     {
@@ -16,7 +16,7 @@
     {
       "id": "node",
       "label": "Node.js APIs",
-      "detail": "Server-side JavaScript and TypeScript, Firebase Cloud Functions and application-service handlers.",
+      "detail": "Firebase Cloud Functions and Fastify services with typed contracts, validation and application-data boundaries.",
       "context": "Web & business applications"
     },
     {
@@ -34,7 +34,7 @@
     {
       "id": "cms",
       "label": "Custom CMSs",
-      "detail": "Administration systems for products, articles, media, staff and site settings, with reusable editors and service modules.",
+      "detail": "Product, article and media administration, rich-text editors, draft and publication workflows, staff access and reusable content models.",
       "context": "Web & business applications"
     },
     {
@@ -57,26 +57,26 @@
     },
     {
       "id": "editorial",
-      "label": "Editorial workflows",
-      "detail": "Drafts, publication windows, preview, archive/restore and guards against losing unsaved edits.",
+      "label": "Offline sync",
+      "detail": "SQLite records with durable pending uploads, stable identifiers, dependency-aware retries and visible correction conflicts.",
       "context": "Web & business applications"
     },
     {
       "id": "business",
       "label": "Application state",
-      "detail": "Form state, loading and error states, query-cache updates and mutations keep editors in step with backend data.",
+      "detail": "Form state, query-cache updates, loading/error states and browser-tab cache coordination keep interfaces consistent with changing data.",
       "context": "Web & business applications"
     },
     {
       "id": "richtext",
-      "label": "Rich-text editing",
-      "detail": "Article editors combine formatted content, uploaded images, metadata and preview/quality feedback.",
+      "label": "React Native & Expo",
+      "detail": "Mobile field-record interfaces, local persistence and forecast views in an Android-first agronomy application in development.",
       "context": "Web & business applications"
     },
     {
       "id": "analytics",
       "label": "Analytics & reporting",
-      "detail": "Consent-aware event collection, batching/retries, backend aggregation and administration dashboards.",
+      "detail": "Application reporting and strategy-game dashboards combine recorded events, historical snapshots, comparisons and interactive D3 charts.",
       "context": "Web & business applications"
     },
     {
@@ -99,26 +99,26 @@
     },
     {
       "id": "accessibility",
-      "label": "Accessible UI",
-      "detail": "Keyboard interaction, dialog focus management, Escape handling and restoration of focus.",
+      "label": "Accessible & responsive UI",
+      "detail": "Keyboard interaction, focus management, status announcements and responsive layouts across public sites and application tools.",
       "context": "Web & business applications"
     },
     {
       "id": "responsive",
-      "label": "Responsive UI",
-      "detail": "HTML and CSS layouts for public pages, administration tools and mobile interfaces.",
+      "label": "Internationalisation",
+      "detail": "Localised static pages, right-to-left presentation, locale-aware number parsing and numeral formatting; responsive layouts support different devices.",
       "context": "Web & business applications"
     },
     {
       "id": "ml",
       "label": "ML & research engineering",
-      "detail": "Applied image classification and independent research into neural architectures, learned memory, GPU execution and controlled evaluation.",
+      "detail": "Applied speech and image processing alongside independent neural-model, learned-memory and GPU execution research.",
       "context": "Area of work"
     },
     {
       "id": "python",
       "label": "Python",
-      "detail": "Model implementations, data preparation, experiment runners and scientific-computing tools.",
+      "detail": "Model research, experiment tooling and document-processing pipelines with PDF extraction, OCR and speech-model integration.",
       "context": "ML projects & independent research"
     },
     {
@@ -204,9 +204,9 @@
     },
     {
       "id": "vision",
-      "label": "Computer vision",
-      "detail": "Image decoding, resizing and normalisation, convolutional classification, class predictions and confusion-matrix diagnostics.",
-      "context": "Applied ML · image-classification coursework"
+      "label": "Computer vision & OCR",
+      "detail": "Image-classification coursework and Tesseract-based text extraction from scanned pages; preprocessing and diagnostics support both workflows.",
+      "context": "Applied ML & document processing"
     },
     {
       "id": "experiments",
@@ -217,9 +217,9 @@
     },
     {
       "id": "applied",
-      "label": "Applied ML",
-      "detail": "Taking a labelled image dataset through preprocessing, classifier training, validation and saved-model inference.",
-      "context": "Applied ML · image-classification coursework"
+      "label": "Speech & alignment",
+      "detail": "Integrating Whisper-family transcription, audio-to-text matching and generated narration in an audio-enhanced EPUB pipeline under development.",
+      "context": "Applied AI · audio-EPUB development"
     },
     {
       "id": "numerical",
@@ -253,26 +253,26 @@
     },
     {
       "id": "events",
-      "label": "Event-driven code",
-      "detail": "Plugin events, persistent item metadata, resource-pack JSON parsing and inventory interactions.",
+      "label": "Events & concurrency",
+      "detail": "Java plugin events, async process handling, Qt workers and browser Web Workers connect background work to application interfaces.",
       "context": "Application work & engineering practice"
     },
     {
       "id": "sql",
       "label": "SQL & data access",
-      "detail": "SQL Server stored-procedure calls, parameterised CRUD, ADO.NET adapters and data tables in C# coursework.",
+      "detail": "PostgreSQL/Drizzle services and SQLite mobile persistence, alongside SQL Server stored procedures and ADO.NET coursework.",
       "context": "Application work & engineering practice"
     },
     {
       "id": "integration",
       "label": "API integration",
-      "detail": "Connecting application services and server APIs, including backend enquiry handling and Paper/Bukkit integrations.",
+      "detail": "Batched external API requests, weather-data validation and caching, speech-service integration and existing server-plugin interfaces.",
       "context": "Application work & engineering practice"
     },
     {
       "id": "desktop",
-      "label": "Desktop apps",
-      "detail": "WinForms student/module management and WPF process execution with asynchronous output and UI dispatch.",
+      "label": "Document pipelines",
+      "detail": "Python PDF-to-EPUB components for fixed and reflowable layouts, OCR, text fragments, embedded narration and SMIL timing; Qt reader interfaces support preview.",
       "context": "Application work & engineering practice"
     },
     {
@@ -283,8 +283,8 @@
     },
     {
       "id": "data",
-      "label": "Data analysis",
-      "detail": "Pandas/NumPy preparation and exploration, with Matplotlib/Seaborn visualisation and notebook-based analysis.",
+      "label": "Data visualisation",
+      "detail": "D3 analytics charts, mobile forecast timelines and rainfall-coverage views; Pandas/NumPy and notebook plotting support exploratory analysis.",
       "context": "Application work & engineering practice"
     },
     {
@@ -296,7 +296,7 @@
     {
       "id": "testing",
       "label": "Automated testing",
-      "detail": "Unit, integration, access-rule and numerical tests check behaviour and failure cases across application and research code.",
+      "detail": "Application, database, access-rule and numerical tests, including offline-delivery failure cases, locale-aware inputs and reference-gradient checks.",
       "context": "Application work & engineering practice"
     },
     {
@@ -344,27 +344,12 @@
     ],
     [
       "cms",
-      "editorial",
-      "application"
-    ],
-    [
-      "cms",
-      "richtext",
-      "application"
-    ],
-    [
-      "cms",
       "media",
       "application"
     ],
     [
       "cms",
       "spreadsheets",
-      "application"
-    ],
-    [
-      "react",
-      "responsive",
       "application"
     ],
     [
@@ -430,11 +415,6 @@
     [
       "python",
       "tensorflow",
-      "application"
-    ],
-    [
-      "tensorflow",
-      "applied",
       "application"
     ],
     [
@@ -538,11 +518,6 @@
       "application"
     ],
     [
-      "csharp",
-      "desktop",
-      "application"
-    ],
-    [
       "applications",
       "linux",
       "application"
@@ -619,14 +594,61 @@
       "data",
       "bridge",
       "Python supports tabular analysis and scientific computation"
+    ],
+    [
+      "react",
+      "richtext",
+      "application"
+    ],
+    [
+      "richtext",
+      "editorial",
+      "application"
+    ],
+    [
+      "typescript",
+      "responsive",
+      "application"
+    ],
+    [
+      "python",
+      "applied",
+      "application"
+    ],
+    [
+      "applications",
+      "desktop",
+      "application"
+    ],
+    [
+      "editorial",
+      "sql",
+      "bridge",
+      "Offline record delivery connects mobile SQLite state to backend persistence"
+    ],
+    [
+      "applied",
+      "desktop",
+      "bridge",
+      "Speech timing connects narration to passages in the generated EPUB"
+    ],
+    [
+      "integration",
+      "events",
+      "practice"
+    ],
+    [
+      "analytics",
+      "business",
+      "practice"
     ]
   ],
   "branches": [
     {
       "id": "web",
-      "label": "Full-stack & CMS",
+      "label": "Web & mobile systems",
       "href": "#work",
-      "link": "Explore business applications",
+      "link": "Explore application projects",
       "rows": [
         [
           "react",
@@ -715,7 +737,7 @@
     {
       "id": "applications",
       "label": "Software & systems",
-      "href": "#more-projects",
+      "href": "#supporting-work",
       "link": "Explore supporting work",
       "rows": [
         [

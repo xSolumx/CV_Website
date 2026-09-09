@@ -38,3 +38,9 @@ Project narratives distinguish the public application, the contribution and engi
 The content pass distinguishes project purpose, contribution and practical capabilities. No business growth or time savings are inferred from source. Career dates, role labels, degree wording and the downloadable PDFs are unchanged.
 
 The final presentation pass puts project purpose and contribution before the supporting image in document/mobile order, retains paired desktop layouts, and places graph context beside its selected row at every width. Heading levels distinguish the ML group from its individual projects. Without JavaScript, the expanded navigation remains in normal document flow.
+
+## CV and project update — 9 September 2026
+
+Selected work now includes an agronomy field-record application, audio-enhanced EPUB authoring, a strategy-game analytics dashboard and IntegerSpark. Development status is explicit; private source links and operational data are not published. The graph remains 51 nodes across three areas, with 65 relationships.
+
+Rebuild the five role-specific PDFs with `python scripts/build-cvs.py` (ReportLab and DejaVu Sans required). Content lives in `data/cv-variants.json`. Copy the general PDF to `CV.pdf` for the compatibility link. Run `node scripts/build-skill-map.cjs` after changing page styles or graph data.
